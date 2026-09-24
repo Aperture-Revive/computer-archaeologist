@@ -31,6 +31,7 @@
     <Product>Computer Archaeologist</Product>
     <Description>Rediscover the forgotten corners of your computer.</Description>
     <Copyright>Copyright (c) 2026 @Aperture-Revive</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Version>1.0.0</Version>
     <RepositoryType>git</RepositoryType>
 
@@ -85,7 +86,19 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.12" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2705" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.5.1" />
+
+    <!--
+      Windows App SDK 2.x is shipped as components. Referencing the components this application
+      actually uses, instead of the metapackage, keeps the unused AI, ML, Search and Widgets payload
+      (onnxruntime, DirectML, the Windows.AI projections and friends - roughly 60 MB) out of the build
+      output entirely. Versions match what Microsoft.WindowsAppSDK 2.5.1 pins.
+    -->
+    <PackageReference Include="Microsoft.WindowsAppSDK.Base" Version="2.0.4" />
+    <PackageReference Include="Microsoft.WindowsAppSDK.Foundation" Version="2.3.12" />
+    <PackageReference Include="Microsoft.WindowsAppSDK.InteractiveExperiences" Version="2.1.9" />
+    <PackageReference Include="Microsoft.WindowsAppSDK.WinUI" Version="2.3.9" />
+    <PackageReference Include="Microsoft.WindowsAppSDK.DWrite" Version="2.1.0" />
+    <PackageReference Include="Microsoft.WindowsAppSDK.Runtime" Version="2.5.1" />
   </ItemGroup>
 
   <ItemGroup>

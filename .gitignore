@@ -1,6 +1,7 @@
 # ---------------------------------------------------------------- build output
 [Bb]in/
 [Oo]bj/
+publish/
 [Aa]pp[Xx]/
 [Dd]ebug/
 [Rr]elease/

@@ -18,6 +18,7 @@
     <Product>Computer Archaeologist</Product>
     <Description>Core library for Computer Archaeologist.</Description>
     <Copyright>Copyright (c) 2026 @Aperture-Revive</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>

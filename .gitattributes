@@ -14,7 +14,8 @@
 *.json      text
 *.manifest  text
 
-# Binary assets
+# Binary assets - never line-ending converted
+*.zip       binary
 *.png       binary
 *.ico       binary
 *.jpg       binary
