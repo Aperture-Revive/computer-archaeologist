@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:AppPage
+    x:Class="ComputerArchaeologist.Views.ReportsPage"
+    x:Name="PageRoot"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:ComputerArchaeologist.Views"
+    xmlns:vm="using:ComputerArchaeologist.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Padding="32,24,32,0">
+        <!-- ============ empty state ============ -->
+        <Border Style="{StaticResource CardBorder}" VerticalAlignment="Top"
+                Visibility="{Binding HasReport, Converter={StaticResource InverseBoolToVisibility}}">
+            <StackPanel Spacing="12" HorizontalAlignment="Center" Padding="0,28">
+                <FontIcon Glyph="&#xE8A5;" FontSize="28" Foreground="{ThemeResource TextFillColorTertiaryBrush}" HorizontalAlignment="Center" />
+                <TextBlock Text="{Binding EmptyText}" Style="{StaticResource SubtitleTextBlockStyle}" HorizontalAlignment="Center" />
+                <TextBlock Text="{Binding EmptyHint}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           TextWrapping="Wrap" MaxWidth="520" TextAlignment="Center" />
+                <Button Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Center" Command="{Binding GoToArchaeologyCommand}">
+                    <TextBlock Text="{Binding [Home_Start], Source={StaticResource Loc}}" />
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
+                      Visibility="{Binding HasReport, Converter={StaticResource BoolToVisibility}}">
+            <StackPanel Spacing="20" Padding="0,0,0,40" MaxWidth="1180" HorizontalAlignment="Stretch">
+
+                <!-- ============ title ============ -->
+                <Grid ColumnSpacing="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Spacing="4">
+                        <TextBlock Text="{Binding Title}" Style="{StaticResource TitleLargeTextBlockStyle}" TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding GeneratedAt}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Bottom">
+                        <Button Command="{Binding ExportCommand}">
+                            <TextBlock Text="{Binding [Report_Export], Source={StaticResource Loc}}" />
+                        </Button>
+                        <Button Command="{Binding GoToDiscoveriesCommand}">
+                            <TextBlock Text="{Binding [Nav_Discoveries], Source={StaticResource Loc}}" />
+                        </Button>
+                    </StackPanel>
+                </Grid>
+
+                <TextBlock Text="{Binding StatusMessage}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           TextWrapping="Wrap" Visibility="{Binding StatusVisible, Converter={StaticResource BoolToVisibility}}" />
+
+                <!-- ============ warnings ============ -->
+                <ItemsControl ItemsSource="{Binding Warnings}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <InfoBar IsOpen="True" Severity="Informational" IsClosable="False" Message="{x:Bind}" Margin="0,0,0,6" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- ============ overview ============ -->
+                <Border Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="14">
+                        <TextBlock Text="{Binding [Report_Overview], Source={StaticResource Loc}}" Style="{StaticResource SubtitleTextBlockStyle}" />
+                        <TextBlock Text="{Binding Overview}" TextWrapping="Wrap" IsTextSelectionEnabled="True" />
+
+                        <ItemsRepeater ItemsSource="{Binding Facts}">
+                            <ItemsRepeater.Layout>
+                                <UniformGridLayout Orientation="Horizontal"
+                                                   MinItemWidth="210" MinItemHeight="94"
+                                                   MinColumnSpacing="8" MinRowSpacing="8"
+                                                   ItemsStretch="Fill" />
+                            </ItemsRepeater.Layout>
+                            <ItemsRepeater.ItemTemplate>
+                                <DataTemplate x:DataType="vm:ReportFact">
+                                    <Border Style="{StaticResource SubtleCardBorder}">
+                                        <Grid RowSpacing="2">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Grid.Row="0" Text="{x:Bind Label}" Style="{StaticResource CaptionTextBlockStyle}"
+                                                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                                       TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" />
+                                            <TextBlock Grid.Row="1" Text="{x:Bind Value}" Style="{StaticResource BodyStrongTextBlockStyle}"
+                                                       TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"
+                                                       VerticalAlignment="Top" />
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsRepeater.ItemTemplate>
+                        </ItemsRepeater>
+                    </StackPanel>
+                </Border>
+
+                <!-- ============ sections ============ -->
+                <ItemsControl ItemsSource="{Binding Sections}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:ReportSectionViewModel">
+                            <StackPanel Spacing="12" Margin="0,0,0,24">
+                                <TextBlock Text="{x:Bind Title}" Style="{StaticResource SubtitleTextBlockStyle}" />
+                                <TextBlock Text="{x:Bind Intro}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                           TextWrapping="Wrap"
+                                           Visibility="{x:Bind Intro, Converter={StaticResource StringToVisibility}}" />
+
+                                <ItemsControl ItemsSource="{x:Bind Artifacts}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate x:DataType="vm:ReportArtifactViewModel">
+                                            <Border Style="{StaticResource CardBorder}" Margin="0,0,0,10">
+                                                <StackPanel Spacing="10">
+                                                    <Grid ColumnSpacing="12">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="*" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <StackPanel Grid.Column="0" Spacing="2">
+                                                            <TextBlock Text="{x:Bind FileName}" Style="{StaticResource BodyStrongTextBlockStyle}" TextTrimming="CharacterEllipsis" />
+                                                            <TextBlock Text="{x:Bind FullPath}" Style="{StaticResource MonoTextBlock}" TextTrimming="CharacterEllipsis" />
+                                                        </StackPanel>
+                                                        <Border Grid.Column="1" Style="{StaticResource ScorePillBorder}">
+                                                            <TextBlock Text="{x:Bind Score}" Style="{StaticResource BodyStrongTextBlockStyle}"
+                                                                       Foreground="{x:Bind ScoreValue, Converter={StaticResource ScoreToBrush}}" />
+                                                        </Border>
+                                                    </Grid>
+
+                                                    <StackPanel Orientation="Horizontal" Spacing="14">
+                                                        <TextBlock Text="{x:Bind Category}" Style="{StaticResource CaptionTextBlockStyle}"
+                                                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                                        <TextBlock Text="{x:Bind Created}" Style="{StaticResource CaptionTextBlockStyle}"
+                                                                   Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                                                        <TextBlock Text="{x:Bind Modified}" Style="{StaticResource CaptionTextBlockStyle}"
+                                                                   Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                                                        <TextBlock Text="{x:Bind Size}" Style="{StaticResource CaptionTextBlockStyle}"
+                                                                   Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                                                        <TextBlock Text="{x:Bind Confidence}" Style="{StaticResource CaptionTextBlockStyle}"
+                                                                   Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                                                    </StackPanel>
+
+                                                    <TextBlock Text="{x:Bind Summary}" TextWrapping="Wrap" />
+
+                                                    <TextBlock Text="{x:Bind Note}" TextWrapping="Wrap"
+                                                               Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                                               FontStyle="Italic"
+                                                               Visibility="{x:Bind Note, Converter={StaticResource StringToVisibility}}" />
+
+                                                    <Expander HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                                                        <Expander.Header>
+                                                            <TextBlock Text="{Binding [Detail_Evidence], Source={StaticResource Loc}}" />
+                                                        </Expander.Header>
+                                                        <ItemsControl ItemsSource="{x:Bind Reasons}">
+                                                            <ItemsControl.ItemTemplate>
+                                                                <DataTemplate x:DataType="x:String">
+                                                                    <TextBlock Text="{x:Bind}" TextWrapping="Wrap" Margin="0,2" />
+                                                                </DataTemplate>
+                                                            </ItemsControl.ItemTemplate>
+                                                        </ItemsControl>
+                                                    </Expander>
+
+                                                    <Button HorizontalAlignment="Left" Command="{x:Bind OpenCommand}">
+                                                        <TextBlock Text="{Binding [Report_OpenDetails], Source={StaticResource Loc}}" />
+                                                    </Button>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- ============ timeline ============ -->
+                <Border Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="12">
+                        <TextBlock Text="{Binding TimelineTitle}" Style="{StaticResource SubtitleTextBlockStyle}" />
+                        <ItemsControl ItemsSource="{Binding Timeline}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="vm:TimelineRow">
+                                    <Grid ColumnSpacing="14" Padding="0,4">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{x:Bind Year}" Style="{StaticResource BodyStrongTextBlockStyle}" MinWidth="56" />
+                                        <Ellipse Grid.Column="1" Width="8" Height="8" Fill="{ThemeResource AccentFillColorDefaultBrush}" VerticalAlignment="Center" />
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="10">
+                                            <TextBlock Text="{x:Bind Count}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                            <TextBlock Text="{x:Bind Highlight}" TextTrimming="CharacterEllipsis"
+                                                       Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+
+                <!-- ============ AI observations ============ -->
+                <Border Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="10">
+                        <TextBlock Text="{Binding [Report_AiObservations], Source={StaticResource Loc}}" Style="{StaticResource SubtitleTextBlockStyle}" />
+                        <TextBlock Text="{Binding AiObservations}" TextWrapping="Wrap" IsTextSelectionEnabled="True" />
+                    </StackPanel>
+                </Border>
+
+                <!-- ============ final summary ============ -->
+                <Border Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="10">
+                        <TextBlock Text="{Binding [Report_FinalSummary], Source={StaticResource Loc}}" Style="{StaticResource SubtitleTextBlockStyle}" />
+                        <TextBlock Text="{Binding FinalSummary}" TextWrapping="Wrap" IsTextSelectionEnabled="True" />
+                        <TextBlock Text="{Binding NarrativeSource}" Style="{StaticResource CaptionTextBlockStyle}"
+                                   Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</local:AppPage>

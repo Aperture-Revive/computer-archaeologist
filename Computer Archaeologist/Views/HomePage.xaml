@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:AppPage
+    x:Class="ComputerArchaeologist.Views.HomePage"
+    x:Name="PageRoot"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:ComputerArchaeologist.Views"
+    xmlns:vm="using:ComputerArchaeologist.ViewModels"
+    mc:Ignorable="d">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <!--
+            A Grid stretches to the viewport, which gives the inner StackPanel a finite width on any
+            window size; the panel is then capped for readability. No element relies on the window
+            being a particular size, so maximizing and restoring cannot break the layout.
+        -->
+        <Grid Padding="32,24,32,40">
+            <StackPanel MaxWidth="1440" HorizontalAlignment="Stretch" Spacing="24">
+
+                <!-- ============================ hero ============================ -->
+                <Grid ColumnSpacing="32">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" MinWidth="280" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Spacing="12" VerticalAlignment="Center">
+                        <TextBlock
+                            Text="{Binding [Home_HeroTitle], Source={StaticResource Loc}}"
+                            Style="{StaticResource TitleLargeTextBlockStyle}"
+                            TextWrapping="Wrap" />
+                        <TextBlock
+                            Text="{Binding [Home_HeroSubtitle], Source={StaticResource Loc}}"
+                            Style="{StaticResource SubtitleTextBlockStyle}"
+                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                            TextWrapping="Wrap" />
+                        <TextBlock
+                            Text="{Binding [Home_HeroBody], Source={StaticResource Loc}}"
+                            Style="{StaticResource BodyTextBlockStyle}"
+                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                            TextWrapping="Wrap"
+                            MaxWidth="640"
+                            HorizontalAlignment="Left" />
+
+                        <ScrollViewer
+                            HorizontalScrollBarVisibility="Auto"
+                            HorizontalScrollMode="Auto"
+                            VerticalScrollBarVisibility="Disabled"
+                            Margin="0,8,0,0">
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <Button
+                                    Style="{StaticResource AccentButtonStyle}"
+                                    Command="{Binding StartCommand}"
+                                    MinWidth="180"
+                                    AutomationProperties.Name="{Binding [Home_Start], Source={StaticResource Loc}}">
+                                    <StackPanel Orientation="Horizontal" Spacing="8">
+                                        <FontIcon Glyph="&#xE81C;" FontSize="15" />
+                                        <TextBlock Text="{Binding [Home_Start], Source={StaticResource Loc}}" />
+                                    </StackPanel>
+                                </Button>
+                                <Button Command="{Binding OpenReportCommand}" IsEnabled="{Binding HasReport}">
+                                    <TextBlock Text="{Binding [Home_OpenLastReport], Source={StaticResource Loc}}" />
+                                </Button>
+                                <Button Command="{Binding OpenDiscoveriesCommand}">
+                                    <TextBlock Text="{Binding [Nav_Discoveries], Source={StaticResource Loc}}" />
+                                </Button>
+                                <Button Command="{Binding OpenSettingsCommand}">
+                                    <TextBlock Text="{Binding [Nav_Settings], Source={StaticResource Loc}}" />
+                                </Button>
+                            </StackPanel>
+                        </ScrollViewer>
+
+                        <StackPanel Orientation="Horizontal" Spacing="8" Margin="0,4,0,0">
+                            <FontIcon Glyph="&#xE823;" FontSize="13" Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                            <TextBlock
+                                Style="{StaticResource CaptionTextBlockStyle}"
+                                Foreground="{ThemeResource TextFillColorTertiaryBrush}">
+                                <Run Text="{Binding [Home_LastRun], Source={StaticResource Loc}}" />
+                                <Run Text=":" />
+                                <Run Text="{Binding LastRunText}" />
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- the most interesting artifact found so far -->
+                    <Border Grid.Column="1" Style="{StaticResource CardBorder}" Width="330" VerticalAlignment="Center">
+                        <StackPanel Spacing="10">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <FontIcon Glyph="&#xE7C1;" FontSize="14" Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                                <TextBlock
+                                    Text="{Binding [Home_CardPlaceholderCaption], Source={StaticResource Loc}}"
+                                    Style="{StaticResource CaptionTextBlockStyle}"
+                                    Foreground="{ThemeResource TextFillColorTertiaryBrush}"
+                                    TextTrimming="CharacterEllipsis" />
+                            </StackPanel>
+
+                            <TextBlock
+                                Text="{Binding HeroYear}"
+                                Style="{StaticResource TitleLargeTextBlockStyle}"
+                                Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                            <TextBlock
+                                Text="{Binding HeroName}"
+                                Style="{StaticResource SubtitleTextBlockStyle}"
+                                TextTrimming="CharacterEllipsis" />
+                            <TextBlock
+                                Text="{Binding HeroKind}"
+                                Style="{StaticResource BodyTextBlockStyle}"
+                                Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+
+                            <Rectangle Height="1" Fill="{ThemeResource DividerStrokeColorDefaultBrush}" Margin="0,4" />
+
+                            <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+                                <TextBlock
+                                    Text="{Binding [Home_FoundCard_Score], Source={StaticResource Loc}}"
+                                    Style="{StaticResource CaptionTextBlockStyle}"
+                                    Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                    VerticalAlignment="Center" />
+                                <Border Style="{StaticResource ScorePillBorder}">
+                                    <TextBlock Text="{Binding HeroScore}" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+                <!-- ============================ notices ============================ -->
+                <InfoBar
+                    IsOpen="{Binding ApiNoticeVisible, Mode=OneWay}"
+                    Severity="Informational"
+                    IsClosable="False"
+                    Message="{Binding ApiNotice}" />
+
+                <!-- ============================ metrics ============================ -->
+                <StackPanel Spacing="10">
+                    <TextBlock
+                        Text="{Binding [Home_LastReport], Source={StaticResource Loc}}"
+                        Style="{StaticResource BodyStrongTextBlockStyle}" />
+
+                    <ItemsRepeater ItemsSource="{Binding Stats}">
+                        <ItemsRepeater.Layout>
+                            <UniformGridLayout
+                                Orientation="Horizontal"
+                                MinItemWidth="188"
+                                MinItemHeight="150"
+                                MinColumnSpacing="12"
+                                MinRowSpacing="12"
+                                ItemsStretch="Fill" />
+                        </ItemsRepeater.Layout>
+                        <ItemsRepeater.ItemTemplate>
+                            <DataTemplate x:DataType="vm:StatCard">
+                                <Border Style="{StaticResource CardBorder}" Padding="16,14">
+                                    <Grid RowSpacing="4">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <!-- The caption row absorbs any slack, so it can never be squeezed. -->
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+                                        <FontIcon
+                                            Grid.Row="0"
+                                            Glyph="{x:Bind Glyph}"
+                                            FontSize="14"
+                                            Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                                        <TextBlock
+                                            Grid.Row="1"
+                                            Text="{x:Bind Value}"
+                                            Style="{StaticResource TitleTextBlockStyle}"
+                                            TextWrapping="NoWrap"
+                                            TextTrimming="CharacterEllipsis" />
+                                        <TextBlock
+                                            Grid.Row="2"
+                                            Text="{x:Bind Label}"
+                                            Style="{StaticResource CaptionTextBlockStyle}"
+                                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                            TextWrapping="NoWrap"
+                                            TextTrimming="CharacterEllipsis"
+                                            VerticalAlignment="Top" />
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsRepeater.ItemTemplate>
+                    </ItemsRepeater>
+                </StackPanel>
+
+                <!-- ============================ history ============================ -->
+                <StackPanel Spacing="10">
+                    <TextBlock Text="{Binding [Home_RecentSessions], Source={StaticResource Loc}}"
+                               Style="{StaticResource BodyStrongTextBlockStyle}" />
+
+                    <Border Style="{StaticResource CardBorder}">
+                        <StackPanel Spacing="8">
+                            <TextBlock
+                                Text="{Binding [Home_HistoryEmpty], Source={StaticResource Loc}}"
+                                Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                Visibility="{Binding IsHistoryEmpty, Converter={StaticResource BoolToVisibility}}" />
+                            <ItemsControl ItemsSource="{Binding RecentSessions}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="vm:SessionRowViewModel">
+                                        <Grid ColumnSpacing="12" Padding="0,6">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" MinWidth="130" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="{x:Bind When, Mode=OneWay}"
+                                                       Style="{StaticResource BodyStrongTextBlockStyle}" />
+                                            <TextBlock Grid.Column="1" Text="{x:Bind Summary, Mode=OneWay}"
+                                                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                                       TextTrimming="CharacterEllipsis" />
+                                            <Button Grid.Column="2" Padding="8,2" Command="{x:Bind OpenCommand}">
+                                                <TextBlock Text="{Binding [Home_OpenLastReport], Source={StaticResource Loc}}" FontSize="12" />
+                                            </Button>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</local:AppPage>

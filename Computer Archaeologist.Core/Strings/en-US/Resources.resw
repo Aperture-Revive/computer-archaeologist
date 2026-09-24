@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Ai_Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="Ai_Error_AllRequestsFailed" xml:space="preserve">
+    <value>Every AI request failed during this run.</value>
+  </data>
+  <data name="Ai_Error_BadRequest" xml:space="preserve">
+    <value>The endpoint rejected the request (400).</value>
+  </data>
+  <data name="Ai_Error_EmptyResponse" xml:space="preserve">
+    <value>The model returned an empty response.</value>
+  </data>
+  <data name="Ai_Error_Forbidden" xml:space="preserve">
+    <value>Access to this model or endpoint is forbidden (403).</value>
+  </data>
+  <data name="Ai_Error_InvalidEndpoint" xml:space="preserve">
+    <value>The base URL is not a valid absolute URL.</value>
+  </data>
+  <data name="Ai_Error_InvalidJson" xml:space="preserve">
+    <value>The model did not return valid JSON, even after a repair attempt.</value>
+  </data>
+  <data name="Ai_Error_ModelUnavailable" xml:space="preserve">
+    <value>The configured model is unavailable.</value>
+  </data>
+  <data name="Ai_Error_Network" xml:space="preserve">
+    <value>A network error occurred.</value>
+  </data>
+  <data name="Ai_Error_NoKey" xml:space="preserve">
+    <value>No API key is configured.</value>
+  </data>
+  <data name="Ai_Error_NotFound" xml:space="preserve">
+    <value>The endpoint or model was not found (404).</value>
+  </data>
+  <data name="Ai_Error_RateLimited" xml:space="preserve">
+    <value>The API rate limit was hit (429). The request was retried automatically.</value>
+  </data>
+  <data name="Ai_Error_Server" xml:space="preserve">
+    <value>The API returned a server error.</value>
+  </data>
+  <data name="Ai_Error_Timeout" xml:space="preserve">
+    <value>The request timed out.</value>
+  </data>
+  <data name="Ai_Error_Unauthorized" xml:space="preserve">
+    <value>The API key was rejected (401).</value>
+  </data>
+  <data name="Ai_RequestFailed" xml:space="preserve">
+    <value>AI request failed</value>
+  </data>
+  <data name="Ai_TestFailed" xml:space="preserve">
+    <value>The connection test failed.</value>
+  </data>
+  <data name="App_Author" xml:space="preserve">
+    <value>by @Aperture-Revive</value>
+  </data>
+  <data name="App_DisplayName" xml:space="preserve">
+    <value>Computer Archaeologist</value>
+  </data>
+  <data name="App_Tagline" xml:space="preserve">
+    <value>Rediscover the forgotten corners of your computer.</value>
+  </data>
+  <data name="Arch_AiAnalyzed" xml:space="preserve">
+    <value>AI analysed</value>
+  </data>
+  <data name="Arch_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Arch_Cancelled" xml:space="preserve">
+    <value>Run cancelled. Partial results were kept.</value>
+  </data>
+  <data name="Arch_Cancelling" xml:space="preserve">
+    <value>Cancelling safely…</value>
+  </data>
+  <data name="Arch_Candidates" xml:space="preserve">
+    <value>Candidates</value>
+  </data>
+  <data name="Arch_Complete" xml:space="preserve">
+    <value>Archaeology complete.</value>
+  </data>
+  <data name="Arch_Current" xml:space="preserve">
+    <value>Currently examining</value>
+  </data>
+  <data name="Arch_Discovery_Notice" xml:space="preserve">
+    <value>Scans read directory listings only. Files are never opened, moved, renamed or deleted.</value>
+  </data>
+  <data name="Arch_Failed" xml:space="preserve">
+    <value>The run could not be completed.</value>
+  </data>
+  <data name="Arch_Idle" xml:space="preserve">
+    <value>No archaeology run in progress.</value>
+  </data>
+  <data name="Arch_LogSummary" xml:space="preserve">
+    <value>Log summary</value>
+  </data>
+  <data name="Arch_OfTotal" xml:space="preserve">
+    <value>{0} / {1}</value>
+  </data>
+  <data name="Arch_Overall" xml:space="preserve">
+    <value>Overall progress</value>
+  </data>
+  <data name="Arch_PrivacyNotice" xml:space="preserve">
+    <value>Local-first: file discovery and scoring happen entirely on this machine. Only the selected candidates are ever sent to the configured AI endpoint.</value>
+  </data>
+  <data name="Arch_Scanned" xml:space="preserve">
+    <value>Files discovered</value>
+  </data>
+  <data name="Arch_Scope_Roots" xml:space="preserve">
+    <value>Scope: {0} selected location(s)</value>
+  </data>
+  <data name="Arch_Scope_WholeMachine" xml:space="preserve">
+    <value>Scope: entire computer</value>
+  </data>
+  <data name="Arch_StageList" xml:space="preserve">
+    <value>Stages</value>
+  </data>
+  <data name="Arch_Stage_Ai" xml:space="preserve">
+    <value>AI analysis of candidates</value>
+  </data>
+  <data name="Arch_Stage_Cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="Arch_Stage_CheckingEverything" xml:space="preserve">
+    <value>Checking Everything</value>
+  </data>
+  <data name="Arch_Stage_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Arch_Stage_Context" xml:space="preserve">
+    <value>Reading folder context</value>
+  </data>
+  <data name="Arch_Stage_Discovering" xml:space="preserve">
+    <value>Searching files</value>
+  </data>
+  <data name="Arch_Stage_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="Arch_Stage_FinalScore" xml:space="preserve">
+    <value>Combining scores</value>
+  </data>
+  <data name="Arch_Stage_Idle" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="Arch_Stage_LocalScore" xml:space="preserve">
+    <value>Computing local interestingness</value>
+  </data>
+  <data name="Arch_Stage_Metadata" xml:space="preserve">
+    <value>Collecting file metadata</value>
+  </data>
+  <data name="Arch_Stage_Preparing" xml:space="preserve">
+    <value>Preparing the scan</value>
+  </data>
+  <data name="Arch_Stage_Report" xml:space="preserve">
+    <value>Generating report</value>
+  </data>
+  <data name="Arch_Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Arch_Subtitle" xml:space="preserve">
+    <value>Seven stages, from the file index to a written report.</value>
+  </data>
+  <data name="Arch_Title" xml:space="preserve">
+    <value>Archaeology</value>
+  </data>
+  <data name="Category_all" xml:space="preserve">
+    <value>All categories</value>
+  </data>
+  <data name="Category_archive" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="Category_configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="Category_forgotten_project" xml:space="preserve">
+    <value>Forgotten Project</value>
+  </data>
+  <data name="Category_game_save" xml:space="preserve">
+    <value>Game Save</value>
+  </data>
+  <data name="Category_log_file" xml:space="preserve">
+    <value>Log File</value>
+  </data>
+  <data name="Category_media" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="Category_old_document" xml:space="preserve">
+    <value>Old Document</value>
+  </data>
+  <data name="Category_old_photo" xml:space="preserve">
+    <value>Old Photo</value>
+  </data>
+  <data name="Category_personal_note" xml:space="preserve">
+    <value>Personal Note</value>
+  </data>
+  <data name="Category_school_work" xml:space="preserve">
+    <value>School Work</value>
+  </data>
+  <data name="Category_source_code" xml:space="preserve">
+    <value>Source Code</value>
+  </data>
+  <data name="Category_strange_file" xml:space="preserve">
+    <value>Strange File</value>
+  </data>
+  <data name="Category_unknown" xml:space="preserve">
+    <value>Unclassified</value>
+  </data>
+  <data name="Common_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Common_Browse" xml:space="preserve">
+    <value>Browse…</value>
+  </data>
+  <data name="Common_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Common_Close2" xml:space="preserve">
+    <value>Dismiss</value>
+  </data>
+  <data name="Common_Copied" xml:space="preserve">
+    <value>Path copied to the clipboard.</value>
+  </data>
+  <data name="Common_Copy" xml:space="preserve">
+    <value>Copy path</value>
+  </data>
+  <data name="Common_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Common_Loading" xml:space="preserve">
+    <value>Loading…</value>
+  </data>
+  <data name="Common_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Common_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Common_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Common_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Common_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Common_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Common_Saved" xml:space="preserve">
+    <value>Settings saved.</value>
+  </data>
+  <data name="Common_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Detail_AiConfidence" xml:space="preserve">
+    <value>AI confidence</value>
+  </data>
+  <data name="Detail_AiInterpretation" xml:space="preserve">
+    <value>AI interpretation</value>
+  </data>
+  <data name="Detail_AiReasons" xml:space="preserve">
+    <value>AI reasons</value>
+  </data>
+  <data name="Detail_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Detail_ConfidenceValue" xml:space="preserve">
+    <value>Confidence {0}%</value>
+  </data>
+  <data name="Detail_ContentNotSent" xml:space="preserve">
+    <value>File content was not read or sent (metadata-only mode).</value>
+  </data>
+  <data name="Detail_ContentSent" xml:space="preserve">
+    <value>A bounded excerpt ({0}) was included in the AI request.</value>
+  </data>
+  <data name="Detail_Contribution" xml:space="preserve">
+    <value>Contribution</value>
+  </data>
+  <data name="Detail_Evidence" xml:space="preserve">
+    <value>Evidence</value>
+  </data>
+  <data name="Detail_ExecutableMessage" xml:space="preserve">
+    <value>This file is executable. Are you sure you want to open it?</value>
+  </data>
+  <data name="Detail_ExecutableTitle" xml:space="preserve">
+    <value>This file is executable</value>
+  </data>
+  <data name="Detail_Facts" xml:space="preserve">
+    <value>Facts</value>
+  </data>
+  <data name="Detail_FileInfo" xml:space="preserve">
+    <value>File information</value>
+  </data>
+  <data name="Detail_LocalFacts" xml:space="preserve">
+    <value>Measured locally</value>
+  </data>
+  <data name="Detail_LocalReasons" xml:space="preserve">
+    <value>Local reasons</value>
+  </data>
+  <data name="Detail_NarrativeNote" xml:space="preserve">
+    <value>Report note</value>
+  </data>
+  <data name="Detail_NoAi" xml:space="preserve">
+    <value>AI analysis was unavailable for this artifact.</value>
+  </data>
+  <data name="Detail_NoRelated" xml:space="preserve">
+    <value>No related files were observed in this folder.</value>
+  </data>
+  <data name="Detail_OpenAnyway" xml:space="preserve">
+    <value>Open anyway</value>
+  </data>
+  <data name="Detail_Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Detail_PreviewUnavailable" xml:space="preserve">
+    <value>No preview is available for this file type.</value>
+  </data>
+  <data name="Detail_RelatedFiles" xml:space="preserve">
+    <value>Related files</value>
+  </data>
+  <data name="Detail_ScoreBreakdown" xml:space="preserve">
+    <value>Score breakdown</value>
+  </data>
+  <data name="Detail_Timeline" xml:space="preserve">
+    <value>Timeline</value>
+  </data>
+  <data name="Detail_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Detail_Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="Detail_Why" xml:space="preserve">
+    <value>Why we found it</value>
+  </data>
+  <data name="Disc_Accessed" xml:space="preserve">
+    <value>Last accessed</value>
+  </data>
+  <data name="Disc_AllCategories" xml:space="preserve">
+    <value>All categories</value>
+  </data>
+  <data name="Disc_Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="Disc_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Disc_Empty" xml:space="preserve">
+    <value>No archaeological discoveries yet.</value>
+  </data>
+  <data name="Disc_EmptyHint" xml:space="preserve">
+    <value>Start an archaeology run to look for forgotten projects, old documents and strange files.</value>
+  </data>
+  <data name="Disc_Filter" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Disc_Modified" xml:space="preserve">
+    <value>Modified</value>
+  </data>
+  <data name="Disc_OpenFile" xml:space="preserve">
+    <value>Open file</value>
+  </data>
+  <data name="Disc_OpenFolder" xml:space="preserve">
+    <value>Open folder</value>
+  </data>
+  <data name="Disc_Path" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="Disc_Rank" xml:space="preserve">
+    <value>#{0}</value>
+  </data>
+  <data name="Disc_ScoreLabel" xml:space="preserve">
+    <value>Interestingness</value>
+  </data>
+  <data name="Disc_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Disc_Sort" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="Disc_Sort_Largest" xml:space="preserve">
+    <value>Largest</value>
+  </data>
+  <data name="Disc_Sort_MostInteresting" xml:space="preserve">
+    <value>Most Interesting</value>
+  </data>
+  <data name="Disc_Sort_MostPersonal" xml:space="preserve">
+    <value>Most Personal</value>
+  </data>
+  <data name="Disc_Sort_MostTechnical" xml:space="preserve">
+    <value>Most Technical</value>
+  </data>
+  <data name="Disc_Sort_Oldest" xml:space="preserve">
+    <value>Oldest</value>
+  </data>
+  <data name="Disc_Sort_Strangest" xml:space="preserve">
+    <value>Strangest</value>
+  </data>
+  <data name="Disc_Subtitle" xml:space="preserve">
+    <value>We found {0} artifacts worth looking at.</value>
+  </data>
+  <data name="Disc_Title" xml:space="preserve">
+    <value>Discoveries</value>
+  </data>
+  <data name="Disc_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Discovery_Source_Local" xml:space="preserve">
+    <value>Local file system</value>
+  </data>
+  <data name="Error_EverythingIpc" xml:space="preserve">
+    <value>Communication with Everything failed.</value>
+  </data>
+  <data name="Error_ScanFailed" xml:space="preserve">
+    <value>The archaeology run failed.</value>
+  </data>
+  <data name="Error_Settings" xml:space="preserve">
+    <value>The settings could not be saved.</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
+  <data name="Error_Unexpected" xml:space="preserve">
+    <value>An unexpected error occurred.</value>
+  </data>
+  <data name="Feature_Age" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="Feature_AiScore" xml:space="preserve">
+    <value>AI score</value>
+  </data>
+  <data name="Feature_Cluster" xml:space="preserve">
+    <value>Project cluster</value>
+  </data>
+  <data name="Feature_Filename" xml:space="preserve">
+    <value>File name</value>
+  </data>
+  <data name="Feature_Historical" xml:space="preserve">
+    <value>Historical</value>
+  </data>
+  <data name="Feature_LocalScore" xml:space="preserve">
+    <value>Local score</value>
+  </data>
+  <data name="Feature_ModificationPattern" xml:space="preserve">
+    <value>Modification pattern</value>
+  </data>
+  <data name="Feature_PathContext" xml:space="preserve">
+    <value>Folder context</value>
+  </data>
+  <data name="Feature_PersonalArtifact" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="Feature_Rarity" xml:space="preserve">
+    <value>Rarity</value>
+  </data>
+  <data name="Feature_StoryPotential" xml:space="preserve">
+    <value>Story potential</value>
+  </data>
+  <data name="Feature_Technical" xml:space="preserve">
+    <value>Technical</value>
+  </data>
+  <data name="Feature_Unusualness" xml:space="preserve">
+    <value>Unusualness</value>
+  </data>
+  <data name="Home_ApiMissing" xml:space="preserve">
+    <value>Configure an OpenAI-compatible API to enable AI archaeology.</value>
+  </data>
+  <data name="Home_CardKind" xml:space="preserve">
+    <value>Forgotten Project</value>
+  </data>
+  <data name="Home_CardPlaceholderCaption" xml:space="preserve">
+    <value>Rediscover the forgotten corners of your computer.</value>
+  </data>
+  <data name="Home_CardPlaceholderTitle" xml:space="preserve">
+    <value>Old Project</value>
+  </data>
+  <data name="Home_FoundCard_Score" xml:space="preserve">
+    <value>Interestingness</value>
+  </data>
+  <data name="Home_FoundCard_Year" xml:space="preserve">
+    <value>2017</value>
+  </data>
+  <data name="Home_HeroBody" xml:space="preserve">
+    <value>Search your own machine for the files that carry history: abandoned projects, old documents, strange one-offs and things you forgot you ever made. Everything stays local unless you allow AI analysis.</value>
+  </data>
+  <data name="Home_HeroSubtitle" xml:space="preserve">
+    <value>Rediscover the forgotten corners of your computer.</value>
+  </data>
+  <data name="Home_HeroTitle" xml:space="preserve">
+    <value>Computer Archaeologist</value>
+  </data>
+  <data name="Home_HistoryEmpty" xml:space="preserve">
+    <value>No previous runs recorded.</value>
+  </data>
+  <data name="Home_HistoryRow" xml:space="preserve">
+    <value>{0} files · {1} discoveries</value>
+  </data>
+  <data name="Home_LastReport" xml:space="preserve">
+    <value>Latest report</value>
+  </data>
+  <data name="Home_LastRun" xml:space="preserve">
+    <value>Last archaeology run</value>
+  </data>
+  <data name="Home_Never" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="Home_NoReport" xml:space="preserve">
+    <value>No report yet.</value>
+  </data>
+  <data name="Home_NoReportHint" xml:space="preserve">
+    <value>Run an archaeology scan and a full report will appear here.</value>
+  </data>
+  <data name="Home_OpenLastReport" xml:space="preserve">
+    <value>Open report</value>
+  </data>
+  <data name="Home_Ready" xml:space="preserve">
+    <value>Ready to explore.</value>
+  </data>
+  <data name="Home_RecentSessions" xml:space="preserve">
+    <value>Previous runs</value>
+  </data>
+  <data name="Home_Start" xml:space="preserve">
+    <value>Start Archaeology</value>
+  </data>
+  <data name="Home_Stat_Ai" xml:space="preserve">
+    <value>AI analysed</value>
+  </data>
+  <data name="Home_Stat_Candidates" xml:space="preserve">
+    <value>Candidates scored</value>
+  </data>
+  <data name="Home_Stat_Discoveries" xml:space="preserve">
+    <value>Discoveries</value>
+  </data>
+  <data name="Home_Stat_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Home_Stat_Scanned" xml:space="preserve">
+    <value>Files scanned</value>
+  </data>
+  <data name="Nav_Archaeology" xml:space="preserve">
+    <value>Archaeology</value>
+  </data>
+  <data name="Nav_Discoveries" xml:space="preserve">
+    <value>Discoveries</value>
+  </data>
+  <data name="Nav_History" xml:space="preserve">
+    <value>Previous runs</value>
+  </data>
+  <data name="Nav_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Nav_Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Nav_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Reason_Age_None" xml:space="preserve">
+    <value>Too recent for age to matter.</value>
+  </data>
+  <data name="Reason_Age_Recent" xml:space="preserve">
+    <value>Modified within the last year.</value>
+  </data>
+  <data name="Reason_Age_Years" xml:space="preserve">
+    <value>{0} years old (from {1})</value>
+  </data>
+  <data name="Reason_Cluster_Alone" xml:space="preserve">
+    <value>The file sits alone in its folder.</value>
+  </data>
+  <data name="Reason_Cluster_None" xml:space="preserve">
+    <value>The folder is unremarkable.</value>
+  </data>
+  <data name="Reason_Cluster_Project" xml:space="preserve">
+    <value>The folder holds {0} files ({1} of them source) and looks like a project.</value>
+  </data>
+  <data name="Reason_Cluster_Siblings" xml:space="preserve">
+    <value>The folder holds {0} related files.</value>
+  </data>
+  <data name="Reason_Filename_Keyword" xml:space="preserve">
+    <value>The file name carries the signal(s): {0}.</value>
+  </data>
+  <data name="Reason_Filename_None" xml:space="preserve">
+    <value>The file name is unremarkable.</value>
+  </data>
+  <data name="Reason_LocalOnly" xml:space="preserve">
+    <value>Scored from local measurements only.</value>
+  </data>
+  <data name="Reason_Mod_Abandoned" xml:space="preserve">
+    <value>Created {0}, last modified {1}, then left alone.</value>
+  </data>
+  <data name="Reason_Mod_Active" xml:space="preserve">
+    <value>Still being modified ({0}).</value>
+  </data>
+  <data name="Reason_Mod_Steady" xml:space="preserve">
+    <value>Last modified {0}.</value>
+  </data>
+  <data name="Reason_ModificationPattern_None" xml:space="preserve">
+    <value>The modification history is unremarkable.</value>
+  </data>
+  <data name="Reason_PathContext_None" xml:space="preserve">
+    <value>The folder says nothing in particular.</value>
+  </data>
+  <data name="Reason_Path_Personal" xml:space="preserve">
+    <value>Located in a folder that looks personal or dated ({0}).</value>
+  </data>
+  <data name="Reason_Path_Transient" xml:space="preserve">
+    <value>Located in a temporary, cached or system folder.</value>
+  </data>
+  <data name="Reason_PersonalArtifact_None" xml:space="preserve">
+    <value>Not an obviously personal file type.</value>
+  </data>
+  <data name="Reason_Personal_Type" xml:space="preserve">
+    <value>{0} files are usually made by a person rather than by the system.</value>
+  </data>
+  <data name="Reason_Rarity_Common" xml:space="preserve">
+    <value>The {0} extension is very common ({1} occurrences).</value>
+  </data>
+  <data name="Reason_Rarity_None" xml:space="preserve">
+    <value>The extension is not especially rare.</value>
+  </data>
+  <data name="Reason_Rarity_Rare" xml:space="preserve">
+    <value>The {0} extension appears only {1} time(s) in {2} scanned files.</value>
+  </data>
+  <data name="Reason_Unusual_Flags" xml:space="preserve">
+    <value>Unusual characteristics: {0}.</value>
+  </data>
+  <data name="Reason_Unusual_None" xml:space="preserve">
+    <value>Nothing structurally unusual.</value>
+  </data>
+  <data name="Reason_Unusualness_None" xml:space="preserve">
+    <value>Nothing structurally unusual.</value>
+  </data>
+  <data name="Report_AiNotConfigured" xml:space="preserve">
+    <value>No OpenAI-compatible API is configured, so this report is local only.</value>
+  </data>
+  <data name="Report_AiObservations" xml:space="preserve">
+    <value>AI Observations</value>
+  </data>
+  <data name="Report_AiPartial" xml:space="preserve">
+    <value>AI analysis failed for some artifacts; local scoring was used for them.</value>
+  </data>
+  <data name="Report_AiSkipped" xml:space="preserve">
+    <value>AI analysis was skipped for this run.</value>
+  </data>
+  <data name="Report_AiUnavailable" xml:space="preserve">
+    <value>AI analysis was unavailable for some artifacts.</value>
+  </data>
+  <data name="Report_CancelledPartial" xml:space="preserve">
+    <value>This run was cancelled; the report covers what was completed.</value>
+  </data>
+  <data name="Report_Discovery" xml:space="preserve">
+    <value>Discovery #{0}</value>
+  </data>
+  <data name="Report_Export" xml:space="preserve">
+    <value>Export as Markdown</value>
+  </data>
+  <data name="Report_ExportFailed" xml:space="preserve">
+    <value>The report could not be exported.</value>
+  </data>
+  <data name="Report_Exported" xml:space="preserve">
+    <value>Report exported to {0}</value>
+  </data>
+  <data name="Report_Fact_AiAnalyzed" xml:space="preserve">
+    <value>AI analysed</value>
+  </data>
+  <data name="Report_Fact_Candidates" xml:space="preserve">
+    <value>Candidates scored</value>
+  </data>
+  <data name="Report_Fact_Discovered" xml:space="preserve">
+    <value>Files discovered</value>
+  </data>
+  <data name="Report_Fact_Discoveries" xml:space="preserve">
+    <value>Discoveries</value>
+  </data>
+  <data name="Report_Fact_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Report_Fact_Narrative" xml:space="preserve">
+    <value>Narrative</value>
+  </data>
+  <data name="Report_Fact_Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="Report_Fact_Source" xml:space="preserve">
+    <value>Discovery engine</value>
+  </data>
+  <data name="Report_FinalSummary" xml:space="preserve">
+    <value>Final Summary</value>
+  </data>
+  <data name="Report_FinalSummary_Local" xml:space="preserve">
+    <value>This run surfaced {0} artifacts. Nothing was modified, moved or deleted: Computer Archaeologist only reads.</value>
+  </data>
+  <data name="Report_ForgottenProjects" xml:space="preserve">
+    <value>Forgotten Projects</value>
+  </data>
+  <data name="Report_ForgottenProjects_Intro" xml:space="preserve">
+    <value>Folders that look like work someone started and then walked away from.</value>
+  </data>
+  <data name="Report_GeneratedAt" xml:space="preserve">
+    <value>Generated {0}</value>
+  </data>
+  <data name="Report_HistoricalArtifacts" xml:space="preserve">
+    <value>Historical Artifacts</value>
+  </data>
+  <data name="Report_HistoricalArtifacts_Intro" xml:space="preserve">
+    <value>The oldest traces found in this run.</value>
+  </data>
+  <data name="Report_ImportantFiles" xml:space="preserve">
+    <value>Potentially Important Files</value>
+  </data>
+  <data name="Report_ImportantFiles_Intro" xml:space="preserve">
+    <value>Files that may matter to you personally, and should not be lost.</value>
+  </data>
+  <data name="Report_MostInteresting" xml:space="preserve">
+    <value>Most Interesting Discoveries</value>
+  </data>
+  <data name="Report_MostInteresting_Intro" xml:space="preserve">
+    <value>The highest scoring artifacts of this run.</value>
+  </data>
+  <data name="Report_Narrative_Ai" xml:space="preserve">
+    <value>Written by the configured AI model</value>
+  </data>
+  <data name="Report_Narrative_Local" xml:space="preserve">
+    <value>Generated locally</value>
+  </data>
+  <data name="Report_NoReport" xml:space="preserve">
+    <value>No report yet.</value>
+  </data>
+  <data name="Report_NoReportHint" xml:space="preserve">
+    <value>Complete an archaeology run to generate a report.</value>
+  </data>
+  <data name="Report_Observations_Empty" xml:space="preserve">
+    <value>Nothing crossed the interestingness threshold in this run.</value>
+  </data>
+  <data name="Report_Observations_Local" xml:space="preserve">
+    <value>The oldest artifact is {0}. The dominant categories are {1}.</value>
+  </data>
+  <data name="Report_OldDocuments" xml:space="preserve">
+    <value>Old Documents</value>
+  </data>
+  <data name="Report_OldDocuments_Intro" xml:space="preserve">
+    <value>Documents that have been sitting on this machine for years.</value>
+  </data>
+  <data name="Report_OpenDetails" xml:space="preserve">
+    <value>View details</value>
+  </data>
+  <data name="Report_Overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Report_Overview_Body" xml:space="preserve">
+    <value>Your computer's index contains {0} files. This run examined {1} candidates. After local analysis and AI-assisted semantic analysis, {2} files were identified as particularly interesting.</value>
+  </data>
+  <data name="Report_Overview_BodyNoAi" xml:space="preserve">
+    <value>Your computer's index contains {0} files. This run examined {1} candidates using local analysis only; {2} files were identified as particularly interesting.</value>
+  </data>
+  <data name="Report_Overview_Run_Ai" xml:space="preserve">
+    <value>This run inspected {0} files and scored {1} candidates. Combining local measurements with AI-assisted semantic analysis, {2} artifacts were identified as particularly interesting.</value>
+  </data>
+  <data name="Report_Overview_Run_Local" xml:space="preserve">
+    <value>This run inspected {0} files and scored {1} candidates using local analysis only. {2} artifacts were identified as particularly interesting.</value>
+  </data>
+  <data name="Report_Scope_Roots" xml:space="preserve">
+    <value>{0} selected location(s)</value>
+  </data>
+  <data name="Report_Scope_WholeMachine" xml:space="preserve">
+    <value>Entire computer</value>
+  </data>
+  <data name="Report_StrangeFiles" xml:space="preserve">
+    <value>Strange Files</value>
+  </data>
+  <data name="Report_StrangeFiles_Intro" xml:space="preserve">
+    <value>Odd names, odd extensions, odd structure.</value>
+  </data>
+  <data name="Report_Timeline" xml:space="preserve">
+    <value>Timeline</value>
+  </data>
+  <data name="Report_Timeline_Count" xml:space="preserve">
+    <value>{0} artifact(s)</value>
+  </data>
+  <data name="Report_Timeline_Year" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="Report_Title" xml:space="preserve">
+    <value>Computer Archaeology Report</value>
+  </data>
+  <data name="Report_WhyInteresting" xml:space="preserve">
+    <value>Why it is interesting</value>
+  </data>
+  <data name="Scope_ChooseFolder" xml:space="preserve">
+    <value>Choose a folder…</value>
+  </data>
+  <data name="Scope_Drive" xml:space="preserve">
+    <value>Drive {0}</value>
+  </data>
+  <data name="Scope_Entire" xml:space="preserve">
+    <value>Entire computer</value>
+  </data>
+  <data name="Scope_Entire_Desc" xml:space="preserve">
+    <value>All indexed fixed drives.</value>
+  </data>
+  <data name="Scope_Folders" xml:space="preserve">
+    <value>Selected folders</value>
+  </data>
+  <data name="Scope_SelectedNone" xml:space="preserve">
+    <value>No folder selected yet; the entire computer will be searched.</value>
+  </data>
+  <data name="Scope_SettingsHint" xml:space="preserve">
+    <value>Pre-filled from Settings.</value>
+  </data>
+  <data name="Scope_Start" xml:space="preserve">
+    <value>Begin archaeology</value>
+  </data>
+  <data name="Scope_Subtitle" xml:space="preserve">
+    <value>Everything is used to search. Pick how wide the net should be cast.</value>
+  </data>
+  <data name="Scope_Title" xml:space="preserve">
+    <value>Choose what to explore</value>
+  </data>
+  <data name="Settings_AddPlaceholder_Extension" xml:space="preserve">
+    <value>.tmp</value>
+  </data>
+  <data name="Settings_AddPlaceholder_Path" xml:space="preserve">
+    <value>D:\Old Projects</value>
+  </data>
+  <data name="Settings_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="Settings_AnalyzeArchives" xml:space="preserve">
+    <value>Analyse archive listings</value>
+  </data>
+  <data name="Settings_AnalyzeCode" xml:space="preserve">
+    <value>Analyse code structure</value>
+  </data>
+  <data name="Settings_AnalyzeImages" xml:space="preserve">
+    <value>Analyse image metadata</value>
+  </data>
+  <data name="Settings_AnalyzeImages_Desc" xml:space="preserve">
+    <value>Read dimensions and format from image headers. Pixels are never uploaded.</value>
+  </data>
+  <data name="Settings_ApiKey" xml:space="preserve">
+    <value>API key</value>
+  </data>
+  <data name="Settings_ApiKey_Empty" xml:space="preserve">
+    <value>No API key stored.</value>
+  </data>
+  <data name="Settings_ApiKey_Placeholder" xml:space="preserve">
+    <value>sk-…</value>
+  </data>
+  <data name="Settings_ApiKey_Stored" xml:space="preserve">
+    <value>A key is currently stored. Enter a new one to replace it.</value>
+  </data>
+  <data name="Settings_Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Settings_Archaeology" xml:space="preserve">
+    <value>Archaeology</value>
+  </data>
+  <data name="Settings_BaseUrl" xml:space="preserve">
+    <value>Base URL</value>
+  </data>
+  <data name="Settings_ClearKey" xml:space="preserve">
+    <value>Clear API key</value>
+  </data>
+  <data name="Settings_Concurrency" xml:space="preserve">
+    <value>Concurrent AI requests</value>
+  </data>
+  <data name="Settings_Connected" xml:space="preserve">
+    <value>Connected</value>
+  </data>
+  <data name="Settings_DataFolder" xml:space="preserve">
+    <value>Data folder</value>
+  </data>
+  <data name="Settings_Discovery" xml:space="preserve">
+    <value>File discovery</value>
+  </data>
+  <data name="Settings_Discovery_Budget" xml:space="preserve">
+    <value>Time budget (minutes, 0 = unlimited)</value>
+  </data>
+  <data name="Settings_Discovery_Concurrency" xml:space="preserve">
+    <value>Parallel directory walkers</value>
+  </data>
+  <data name="Settings_Discovery_Concurrency_Desc" xml:space="preserve">
+    <value>Higher finishes sooner on an SSD; lower is gentler on a mechanical drive or a network share.</value>
+  </data>
+  <data name="Settings_Discovery_Desc" xml:space="preserve">
+    <value>Computer Archaeologist walks the file system itself, in parallel, with hard time and file budgets. No external index or service is required, and the scan never leaves this machine.</value>
+  </data>
+  <data name="Settings_Discovery_MaxFiles" xml:space="preserve">
+    <value>Maximum scanned files per run</value>
+  </data>
+  <data name="Settings_ExcludedExtensions" xml:space="preserve">
+    <value>Excluded extensions</value>
+  </data>
+  <data name="Settings_ExcludedExtensions_Desc" xml:space="preserve">
+    <value>Additional extensions to ignore, for example .iso</value>
+  </data>
+  <data name="Settings_ExcludedPaths" xml:space="preserve">
+    <value>Excluded paths</value>
+  </data>
+  <data name="Settings_ExcludedPaths_Desc" xml:space="preserve">
+    <value>Additional folders to ignore. Built-in system, cache and build-output exclusions always apply.</value>
+  </data>
+  <data name="Settings_Fallback" xml:space="preserve">
+    <value>Allow built-in fallback discovery</value>
+  </data>
+  <data name="Settings_Fallback_Desc" xml:space="preserve">
+    <value>Only used when Everything is unavailable. It walks fixed drives with hard time and file limits, and is much slower.</value>
+  </data>
+  <data name="Settings_HashTop" xml:space="preserve">
+    <value>Compute SHA-256 for final candidates</value>
+  </data>
+  <data name="Settings_IncludedRoots" xml:space="preserve">
+    <value>Restrict discovery to</value>
+  </data>
+  <data name="Settings_IncludedRoots_Desc" xml:space="preserve">
+    <value>When empty, the whole machine is explored.</value>
+  </data>
+  <data name="Settings_JsonMode" xml:space="preserve">
+    <value>Ask the endpoint for JSON output mode</value>
+  </data>
+  <data name="Settings_KeyCleared" xml:space="preserve">
+    <value>The stored API key was cleared.</value>
+  </data>
+  <data name="Settings_KeySaved" xml:space="preserve">
+    <value>The API key is stored in the Windows Credential Manager.</value>
+  </data>
+  <data name="Settings_KeyStorageFormat" xml:space="preserve">
+    <value>Stored in: {0}</value>
+  </data>
+  <data name="Settings_KeyStorage_CredentialManager" xml:space="preserve">
+    <value>Windows Credential Manager</value>
+  </data>
+  <data name="Settings_KeyStorage_Memory" xml:space="preserve">
+    <value>In-memory only</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Settings_LanguageApplied" xml:space="preserve">
+    <value>Language applied.</value>
+  </data>
+  <data name="Settings_Language_System" xml:space="preserve">
+    <value>Follow system</value>
+  </data>
+  <data name="Settings_MaxAi" xml:space="preserve">
+    <value>Maximum AI analyses per run</value>
+  </data>
+  <data name="Settings_MaxCandidates" xml:space="preserve">
+    <value>Candidates kept after local scoring</value>
+  </data>
+  <data name="Settings_MaxContentBytes" xml:space="preserve">
+    <value>Maximum content excerpt (bytes)</value>
+  </data>
+  <data name="Settings_MaxDiscoveries" xml:space="preserve">
+    <value>Maximum discoveries in the report</value>
+  </data>
+  <data name="Settings_MaxScan" xml:space="preserve">
+    <value>Maximum scanned files</value>
+  </data>
+  <data name="Settings_MinScore" xml:space="preserve">
+    <value>Minimum interestingness</value>
+  </data>
+  <data name="Settings_Model" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="Settings_OpenAi" xml:space="preserve">
+    <value>OpenAI-compatible API</value>
+  </data>
+  <data name="Settings_OpenAi_Desc" xml:space="preserve">
+    <value>Any endpoint that speaks the OpenAI chat completions API works.</value>
+  </data>
+  <data name="Settings_OpenDataFolder" xml:space="preserve">
+    <value>Open data folder</value>
+  </data>
+  <data name="Settings_Privacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="Settings_Privacy_Metadata" xml:space="preserve">
+    <value>Metadata only</value>
+  </data>
+  <data name="Settings_Privacy_Metadata_Desc" xml:space="preserve">
+    <value>Send names, paths, timestamps, size, extension and folder context. No file contents.</value>
+  </data>
+  <data name="Settings_Privacy_Notice" xml:space="preserve">
+    <value>AI analysis may send selected file metadata or content excerpts to the configured OpenAI-compatible API. File discovery and scoring always happen locally.</value>
+  </data>
+  <data name="Settings_Privacy_Off" xml:space="preserve">
+    <value>Disable AI content analysis</value>
+  </data>
+  <data name="Settings_Privacy_Off_Desc" xml:space="preserve">
+    <value>No request is ever sent. Everything runs locally and the report is generated locally.</value>
+  </data>
+  <data name="Settings_Privacy_Smart" xml:space="preserve">
+    <value>Smart content</value>
+  </data>
+  <data name="Settings_Privacy_Smart_Desc" xml:space="preserve">
+    <value>Additionally read a small bounded excerpt from text-like files when it helps.</value>
+  </data>
+  <data name="Settings_ResetConfirm_Message" xml:space="preserve">
+    <value>Theme, language, API endpoint, archaeology limits and weights will all return to their defaults. The stored API key is not affected.</value>
+  </data>
+  <data name="Settings_ResetConfirm_Title" xml:space="preserve">
+    <value>Reset all settings?</value>
+  </data>
+  <data name="Settings_ResetDefaults" xml:space="preserve">
+    <value>Reset to defaults</value>
+  </data>
+  <data name="Settings_Retries" xml:space="preserve">
+    <value>Retries for 429 / 5xx / timeout</value>
+  </data>
+  <data name="Settings_Subtitle" xml:space="preserve">
+    <value>Everything here is stored locally. Your API key never touches a plain-text file.</value>
+  </data>
+  <data name="Settings_TestConnection" xml:space="preserve">
+    <value>Test connection</value>
+  </data>
+  <data name="Settings_Testing" xml:space="preserve">
+    <value>Testing…</value>
+  </data>
+  <data name="Settings_Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Settings_ThemeApplied" xml:space="preserve">
+    <value>Theme applied.</value>
+  </data>
+  <data name="Settings_Theme_Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Settings_Theme_Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Settings_Theme_System" xml:space="preserve">
+    <value>Follow system</value>
+  </data>
+  <data name="Settings_Timeout" xml:space="preserve">
+    <value>Request timeout (seconds)</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Settings_Weight_Ai" xml:space="preserve">
+    <value>AI weight (scaled by confidence)</value>
+  </data>
+  <data name="Settings_Weight_MinConfidence" xml:space="preserve">
+    <value>Minimum confidence scale</value>
+  </data>
+  <data name="Settings_Weights" xml:space="preserve">
+    <value>Interestingness weights</value>
+  </data>
+  <data name="Settings_Weights_Desc" xml:space="preserve">
+    <value>Weights are normalised automatically, so they do not have to add up to 1.</value>
+  </data>
+  <data name="TitleBar_Maximize" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="TitleBar_Minimize" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="TitleBar_Restore" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="Warning_Cancelled" xml:space="preserve">
+    <value>The run was cancelled; partial results were kept.</value>
+  </data>
+  <data name="Warning_CancelledDuringAi" xml:space="preserve">
+    <value>Cancellation happened during AI analysis; some candidates were not analysed.</value>
+  </data>
+  <data name="Warning_ScanBudgetReached" xml:space="preserve">
+    <value>The time budget was reached, so the scan stopped early.</value>
+  </data>
+  <data name="Warning_ScanLimitReached" xml:space="preserve">
+    <value>The configured maximum number of files was reached; the scan stopped early.</value>
+  </data>
+  <data name="Warning_SettingsLoadFailed" xml:space="preserve">
+    <value>The settings file could not be read and defaults were used.</value>
+  </data>
+</root>

@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Ai_Connected" xml:space="preserve">
+    <value>连接成功</value>
+  </data>
+  <data name="Ai_Error_AllRequestsFailed" xml:space="preserve">
+    <value>本次运行中所有 AI 请求都失败了。</value>
+  </data>
+  <data name="Ai_Error_BadRequest" xml:space="preserve">
+    <value>接口拒绝了该请求（400）。</value>
+  </data>
+  <data name="Ai_Error_EmptyResponse" xml:space="preserve">
+    <value>模型返回了空响应。</value>
+  </data>
+  <data name="Ai_Error_Forbidden" xml:space="preserve">
+    <value>无权访问该模型或接口（403）。</value>
+  </data>
+  <data name="Ai_Error_InvalidEndpoint" xml:space="preserve">
+    <value>Base URL 不是有效的绝对地址。</value>
+  </data>
+  <data name="Ai_Error_InvalidJson" xml:space="preserve">
+    <value>模型未返回有效 JSON，修复尝试也失败。</value>
+  </data>
+  <data name="Ai_Error_ModelUnavailable" xml:space="preserve">
+    <value>配置的模型不可用。</value>
+  </data>
+  <data name="Ai_Error_Network" xml:space="preserve">
+    <value>网络错误。</value>
+  </data>
+  <data name="Ai_Error_NoKey" xml:space="preserve">
+    <value>尚未配置 API Key。</value>
+  </data>
+  <data name="Ai_Error_NotFound" xml:space="preserve">
+    <value>未找到该接口或模型（404）。</value>
+  </data>
+  <data name="Ai_Error_RateLimited" xml:space="preserve">
+    <value>触发了 API 速率限制（429），已自动重试。</value>
+  </data>
+  <data name="Ai_Error_Server" xml:space="preserve">
+    <value>接口返回服务器错误。</value>
+  </data>
+  <data name="Ai_Error_Timeout" xml:space="preserve">
+    <value>请求超时。</value>
+  </data>
+  <data name="Ai_Error_Unauthorized" xml:space="preserve">
+    <value>API Key 被拒绝（401）。</value>
+  </data>
+  <data name="Ai_RequestFailed" xml:space="preserve">
+    <value>AI 请求失败</value>
+  </data>
+  <data name="Ai_TestFailed" xml:space="preserve">
+    <value>连接测试失败。</value>
+  </data>
+  <data name="App_Author" xml:space="preserve">
+    <value>作者 @Aperture-Revive</value>
+  </data>
+  <data name="App_DisplayName" xml:space="preserve">
+    <value>计算机考古学家</value>
+  </data>
+  <data name="App_Tagline" xml:space="preserve">
+    <value>重新发现电脑里被遗忘的角落。</value>
+  </data>
+  <data name="Arch_AiAnalyzed" xml:space="preserve">
+    <value>AI 已分析</value>
+  </data>
+  <data name="Arch_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Arch_Cancelled" xml:space="preserve">
+    <value>已取消，已完成的部分结果被保留。</value>
+  </data>
+  <data name="Arch_Cancelling" xml:space="preserve">
+    <value>正在安全取消…</value>
+  </data>
+  <data name="Arch_Candidates" xml:space="preserve">
+    <value>候选数量</value>
+  </data>
+  <data name="Arch_Complete" xml:space="preserve">
+    <value>考古完成。</value>
+  </data>
+  <data name="Arch_Current" xml:space="preserve">
+    <value>当前处理</value>
+  </data>
+  <data name="Arch_Discovery_Notice" xml:space="preserve">
+    <value>扫描只读取目录列表，绝不打开、移动、重命名或删除文件。</value>
+  </data>
+  <data name="Arch_Failed" xml:space="preserve">
+    <value>本次运行未能完成。</value>
+  </data>
+  <data name="Arch_Idle" xml:space="preserve">
+    <value>当前没有进行中的考古。</value>
+  </data>
+  <data name="Arch_LogSummary" xml:space="preserve">
+    <value>日志摘要</value>
+  </data>
+  <data name="Arch_OfTotal" xml:space="preserve">
+    <value>{0} / {1}</value>
+  </data>
+  <data name="Arch_Overall" xml:space="preserve">
+    <value>总进度</value>
+  </data>
+  <data name="Arch_PrivacyNotice" xml:space="preserve">
+    <value>本地优先：文件发现与评分完全在本机完成。只有被选中的候选文件才会发送到你配置的 AI 接口。</value>
+  </data>
+  <data name="Arch_Scanned" xml:space="preserve">
+    <value>已发现文件</value>
+  </data>
+  <data name="Arch_Scope_Roots" xml:space="preserve">
+    <value>范围：已选 {0} 个位置</value>
+  </data>
+  <data name="Arch_Scope_WholeMachine" xml:space="preserve">
+    <value>范围：整台电脑</value>
+  </data>
+  <data name="Arch_StageList" xml:space="preserve">
+    <value>阶段</value>
+  </data>
+  <data name="Arch_Stage_Ai" xml:space="preserve">
+    <value>AI 分析候选文件</value>
+  </data>
+  <data name="Arch_Stage_Cancelled" xml:space="preserve">
+    <value>已取消</value>
+  </data>
+  <data name="Arch_Stage_CheckingEverything" xml:space="preserve">
+    <value>检查 Everything</value>
+  </data>
+  <data name="Arch_Stage_Completed" xml:space="preserve">
+    <value>已完成</value>
+  </data>
+  <data name="Arch_Stage_Context" xml:space="preserve">
+    <value>读取文件夹上下文</value>
+  </data>
+  <data name="Arch_Stage_Discovering" xml:space="preserve">
+    <value>搜索文件</value>
+  </data>
+  <data name="Arch_Stage_Failed" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="Arch_Stage_FinalScore" xml:space="preserve">
+    <value>综合评分</value>
+  </data>
+  <data name="Arch_Stage_Idle" xml:space="preserve">
+    <value>空闲</value>
+  </data>
+  <data name="Arch_Stage_LocalScore" xml:space="preserve">
+    <value>计算本地有趣值</value>
+  </data>
+  <data name="Arch_Stage_Metadata" xml:space="preserve">
+    <value>收集文件元数据</value>
+  </data>
+  <data name="Arch_Stage_Preparing" xml:space="preserve">
+    <value>准备扫描</value>
+  </data>
+  <data name="Arch_Stage_Report" xml:space="preserve">
+    <value>生成报告</value>
+  </data>
+  <data name="Arch_Start" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="Arch_Subtitle" xml:space="preserve">
+    <value>从文件索引到考古报告，共七个阶段。</value>
+  </data>
+  <data name="Arch_Title" xml:space="preserve">
+    <value>考古</value>
+  </data>
+  <data name="Category_all" xml:space="preserve">
+    <value>全部类别</value>
+  </data>
+  <data name="Category_archive" xml:space="preserve">
+    <value>压缩包</value>
+  </data>
+  <data name="Category_configuration" xml:space="preserve">
+    <value>配置文件</value>
+  </data>
+  <data name="Category_forgotten_project" xml:space="preserve">
+    <value>被遗忘的项目</value>
+  </data>
+  <data name="Category_game_save" xml:space="preserve">
+    <value>游戏存档</value>
+  </data>
+  <data name="Category_log_file" xml:space="preserve">
+    <value>日志文件</value>
+  </data>
+  <data name="Category_media" xml:space="preserve">
+    <value>媒体</value>
+  </data>
+  <data name="Category_old_document" xml:space="preserve">
+    <value>老文档</value>
+  </data>
+  <data name="Category_old_photo" xml:space="preserve">
+    <value>老照片</value>
+  </data>
+  <data name="Category_personal_note" xml:space="preserve">
+    <value>个人笔记</value>
+  </data>
+  <data name="Category_school_work" xml:space="preserve">
+    <value>学生作业</value>
+  </data>
+  <data name="Category_source_code" xml:space="preserve">
+    <value>源代码</value>
+  </data>
+  <data name="Category_strange_file" xml:space="preserve">
+    <value>奇怪文件</value>
+  </data>
+  <data name="Category_unknown" xml:space="preserve">
+    <value>未分类</value>
+  </data>
+  <data name="Common_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Common_Browse" xml:space="preserve">
+    <value>浏览…</value>
+  </data>
+  <data name="Common_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Common_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Common_Close2" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Common_Copied" xml:space="preserve">
+    <value>路径已复制到剪贴板。</value>
+  </data>
+  <data name="Common_Copy" xml:space="preserve">
+    <value>复制路径</value>
+  </data>
+  <data name="Common_Details" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="Common_Loading" xml:space="preserve">
+    <value>正在加载…</value>
+  </data>
+  <data name="Common_None" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="Common_OK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Common_Open" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="Common_Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Common_Remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="Common_Retry" xml:space="preserve">
+    <value>重试</value>
+  </data>
+  <data name="Common_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Common_Saved" xml:space="preserve">
+    <value>设置已保存。</value>
+  </data>
+  <data name="Common_Unknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="Detail_AiConfidence" xml:space="preserve">
+    <value>AI 置信度</value>
+  </data>
+  <data name="Detail_AiInterpretation" xml:space="preserve">
+    <value>AI 推断</value>
+  </data>
+  <data name="Detail_AiReasons" xml:space="preserve">
+    <value>AI 原因</value>
+  </data>
+  <data name="Detail_Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="Detail_ConfidenceValue" xml:space="preserve">
+    <value>置信度 {0}%</value>
+  </data>
+  <data name="Detail_ContentNotSent" xml:space="preserve">
+    <value>未读取或发送文件内容（仅元数据模式）。</value>
+  </data>
+  <data name="Detail_ContentSent" xml:space="preserve">
+    <value>已向 AI 请求中附带有限的内容摘要（{0}）。</value>
+  </data>
+  <data name="Detail_Contribution" xml:space="preserve">
+    <value>贡献</value>
+  </data>
+  <data name="Detail_Evidence" xml:space="preserve">
+    <value>证据</value>
+  </data>
+  <data name="Detail_ExecutableMessage" xml:space="preserve">
+    <value>这是一个可执行文件，确定要打开它吗？</value>
+  </data>
+  <data name="Detail_ExecutableTitle" xml:space="preserve">
+    <value>该文件是可执行文件</value>
+  </data>
+  <data name="Detail_Facts" xml:space="preserve">
+    <value>事实</value>
+  </data>
+  <data name="Detail_FileInfo" xml:space="preserve">
+    <value>文件信息</value>
+  </data>
+  <data name="Detail_LocalFacts" xml:space="preserve">
+    <value>本地测量</value>
+  </data>
+  <data name="Detail_LocalReasons" xml:space="preserve">
+    <value>本地原因</value>
+  </data>
+  <data name="Detail_NarrativeNote" xml:space="preserve">
+    <value>报告注记</value>
+  </data>
+  <data name="Detail_NoAi" xml:space="preserve">
+    <value>该文件没有可用的 AI 分析。</value>
+  </data>
+  <data name="Detail_NoRelated" xml:space="preserve">
+    <value>该文件夹中未发现相关文件。</value>
+  </data>
+  <data name="Detail_OpenAnyway" xml:space="preserve">
+    <value>仍然打开</value>
+  </data>
+  <data name="Detail_Preview" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="Detail_PreviewUnavailable" xml:space="preserve">
+    <value>该文件类型暂不支持预览。</value>
+  </data>
+  <data name="Detail_RelatedFiles" xml:space="preserve">
+    <value>相关文件</value>
+  </data>
+  <data name="Detail_ScoreBreakdown" xml:space="preserve">
+    <value>评分明细</value>
+  </data>
+  <data name="Detail_Timeline" xml:space="preserve">
+    <value>时间线</value>
+  </data>
+  <data name="Detail_Value" xml:space="preserve">
+    <value>数值</value>
+  </data>
+  <data name="Detail_Weight" xml:space="preserve">
+    <value>权重</value>
+  </data>
+  <data name="Detail_Why" xml:space="preserve">
+    <value>为什么它有趣</value>
+  </data>
+  <data name="Disc_Accessed" xml:space="preserve">
+    <value>最后访问</value>
+  </data>
+  <data name="Disc_AllCategories" xml:space="preserve">
+    <value>全部类别</value>
+  </data>
+  <data name="Disc_Created" xml:space="preserve">
+    <value>创建时间</value>
+  </data>
+  <data name="Disc_Details" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="Disc_Empty" xml:space="preserve">
+    <value>还没有发现值得考古的文件。</value>
+  </data>
+  <data name="Disc_EmptyHint" xml:space="preserve">
+    <value>开始一次考古，寻找被遗忘的项目、老文档和奇怪的文件。</value>
+  </data>
+  <data name="Disc_Filter" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="Disc_Modified" xml:space="preserve">
+    <value>修改时间</value>
+  </data>
+  <data name="Disc_OpenFile" xml:space="preserve">
+    <value>打开文件</value>
+  </data>
+  <data name="Disc_OpenFolder" xml:space="preserve">
+    <value>打开所在文件夹</value>
+  </data>
+  <data name="Disc_Path" xml:space="preserve">
+    <value>路径</value>
+  </data>
+  <data name="Disc_Rank" xml:space="preserve">
+    <value>第 {0} 位</value>
+  </data>
+  <data name="Disc_ScoreLabel" xml:space="preserve">
+    <value>有趣值</value>
+  </data>
+  <data name="Disc_Size" xml:space="preserve">
+    <value>大小</value>
+  </data>
+  <data name="Disc_Sort" xml:space="preserve">
+    <value>排序</value>
+  </data>
+  <data name="Disc_Sort_Largest" xml:space="preserve">
+    <value>最大</value>
+  </data>
+  <data name="Disc_Sort_MostInteresting" xml:space="preserve">
+    <value>最有趣</value>
+  </data>
+  <data name="Disc_Sort_MostPersonal" xml:space="preserve">
+    <value>最个人</value>
+  </data>
+  <data name="Disc_Sort_MostTechnical" xml:space="preserve">
+    <value>最技术</value>
+  </data>
+  <data name="Disc_Sort_Oldest" xml:space="preserve">
+    <value>最古老</value>
+  </data>
+  <data name="Disc_Sort_Strangest" xml:space="preserve">
+    <value>最奇怪</value>
+  </data>
+  <data name="Disc_Subtitle" xml:space="preserve">
+    <value>共找到 {0} 个值得一看的文件。</value>
+  </data>
+  <data name="Disc_Title" xml:space="preserve">
+    <value>发现</value>
+  </data>
+  <data name="Disc_Type" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="Discovery_Source_Local" xml:space="preserve">
+    <value>本地文件系统</value>
+  </data>
+  <data name="Error_EverythingIpc" xml:space="preserve">
+    <value>与 Everything 通信失败。</value>
+  </data>
+  <data name="Error_ScanFailed" xml:space="preserve">
+    <value>考古运行失败。</value>
+  </data>
+  <data name="Error_Settings" xml:space="preserve">
+    <value>设置保存失败。</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>出现问题</value>
+  </data>
+  <data name="Error_Unexpected" xml:space="preserve">
+    <value>发生了意外错误。</value>
+  </data>
+  <data name="Feature_Age" xml:space="preserve">
+    <value>年龄</value>
+  </data>
+  <data name="Feature_AiScore" xml:space="preserve">
+    <value>AI 评分</value>
+  </data>
+  <data name="Feature_Cluster" xml:space="preserve">
+    <value>文件簇</value>
+  </data>
+  <data name="Feature_Filename" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="Feature_Historical" xml:space="preserve">
+    <value>历史价值</value>
+  </data>
+  <data name="Feature_LocalScore" xml:space="preserve">
+    <value>本地评分</value>
+  </data>
+  <data name="Feature_ModificationPattern" xml:space="preserve">
+    <value>修改模式</value>
+  </data>
+  <data name="Feature_PathContext" xml:space="preserve">
+    <value>路径语境</value>
+  </data>
+  <data name="Feature_PersonalArtifact" xml:space="preserve">
+    <value>个人属性</value>
+  </data>
+  <data name="Feature_Rarity" xml:space="preserve">
+    <value>稀有度</value>
+  </data>
+  <data name="Feature_StoryPotential" xml:space="preserve">
+    <value>故事潜力</value>
+  </data>
+  <data name="Feature_Technical" xml:space="preserve">
+    <value>技术价值</value>
+  </data>
+  <data name="Feature_Unusualness" xml:space="preserve">
+    <value>异常度</value>
+  </data>
+  <data name="Home_ApiMissing" xml:space="preserve">
+    <value>配置一个 OpenAI 兼容 API 即可启用 AI 考古。</value>
+  </data>
+  <data name="Home_CardKind" xml:space="preserve">
+    <value>被遗忘的项目</value>
+  </data>
+  <data name="Home_CardPlaceholderCaption" xml:space="preserve">
+    <value>重新发现电脑里被遗忘的角落。</value>
+  </data>
+  <data name="Home_CardPlaceholderTitle" xml:space="preserve">
+    <value>旧项目</value>
+  </data>
+  <data name="Home_FoundCard_Score" xml:space="preserve">
+    <value>有趣值</value>
+  </data>
+  <data name="Home_FoundCard_Year" xml:space="preserve">
+    <value>2017</value>
+  </data>
+  <data name="Home_HeroBody" xml:space="preserve">
+    <value>在自己的电脑里寻找有历史痕迹的文件：被放弃的项目、老文档、奇怪的一次性文件，以及你早已忘记自己做过的东西。除非你允许 AI 分析，否则一切都在本地完成。</value>
+  </data>
+  <data name="Home_HeroSubtitle" xml:space="preserve">
+    <value>重新发现电脑里被遗忘的角落。</value>
+  </data>
+  <data name="Home_HeroTitle" xml:space="preserve">
+    <value>计算机考古学家</value>
+  </data>
+  <data name="Home_HistoryEmpty" xml:space="preserve">
+    <value>还没有历史记录。</value>
+  </data>
+  <data name="Home_HistoryRow" xml:space="preserve">
+    <value>{0} 个文件 · {1} 个发现</value>
+  </data>
+  <data name="Home_LastReport" xml:space="preserve">
+    <value>最近一次报告</value>
+  </data>
+  <data name="Home_LastRun" xml:space="preserve">
+    <value>上一次考古</value>
+  </data>
+  <data name="Home_Never" xml:space="preserve">
+    <value>从未</value>
+  </data>
+  <data name="Home_NoReport" xml:space="preserve">
+    <value>还没有报告。</value>
+  </data>
+  <data name="Home_NoReportHint" xml:space="preserve">
+    <value>运行一次考古扫描后，完整报告会出现在这里。</value>
+  </data>
+  <data name="Home_OpenLastReport" xml:space="preserve">
+    <value>查看报告</value>
+  </data>
+  <data name="Home_Ready" xml:space="preserve">
+    <value>准备好了，随时可以开始。</value>
+  </data>
+  <data name="Home_RecentSessions" xml:space="preserve">
+    <value>历史记录</value>
+  </data>
+  <data name="Home_Start" xml:space="preserve">
+    <value>开始考古</value>
+  </data>
+  <data name="Home_Stat_Ai" xml:space="preserve">
+    <value>AI 分析</value>
+  </data>
+  <data name="Home_Stat_Candidates" xml:space="preserve">
+    <value>候选文件</value>
+  </data>
+  <data name="Home_Stat_Discoveries" xml:space="preserve">
+    <value>有趣发现</value>
+  </data>
+  <data name="Home_Stat_Duration" xml:space="preserve">
+    <value>耗时</value>
+  </data>
+  <data name="Home_Stat_Scanned" xml:space="preserve">
+    <value>已扫描文件</value>
+  </data>
+  <data name="Nav_Archaeology" xml:space="preserve">
+    <value>考古</value>
+  </data>
+  <data name="Nav_Discoveries" xml:space="preserve">
+    <value>发现</value>
+  </data>
+  <data name="Nav_History" xml:space="preserve">
+    <value>历史记录</value>
+  </data>
+  <data name="Nav_Home" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="Nav_Reports" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="Nav_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Reason_Age_None" xml:space="preserve">
+    <value>时间太新，年龄不构成价值。</value>
+  </data>
+  <data name="Reason_Age_Recent" xml:space="preserve">
+    <value>一年内修改过。</value>
+  </data>
+  <data name="Reason_Age_Years" xml:space="preserve">
+    <value>约 {0} 年历史（{1} 年）</value>
+  </data>
+  <data name="Reason_Cluster_Alone" xml:space="preserve">
+    <value>该文件在目录中单独存在。</value>
+  </data>
+  <data name="Reason_Cluster_None" xml:space="preserve">
+    <value>所在文件夹没有特别之处。</value>
+  </data>
+  <data name="Reason_Cluster_Project" xml:space="preserve">
+    <value>该文件夹包含 {0} 个文件（其中 {1} 个是源代码），看起来像一个项目。</value>
+  </data>
+  <data name="Reason_Cluster_Siblings" xml:space="preserve">
+    <value>该文件夹包含 {0} 个相关文件。</value>
+  </data>
+  <data name="Reason_Filename_Keyword" xml:space="preserve">
+    <value>文件名包含线索：{0}。</value>
+  </data>
+  <data name="Reason_Filename_None" xml:space="preserve">
+    <value>文件名很普通。</value>
+  </data>
+  <data name="Reason_LocalOnly" xml:space="preserve">
+    <value>仅根据本地测量评分。</value>
+  </data>
+  <data name="Reason_Mod_Abandoned" xml:space="preserve">
+    <value>创建于 {0}，最后修改于 {1}，之后一直被搁置。</value>
+  </data>
+  <data name="Reason_Mod_Active" xml:space="preserve">
+    <value>仍在被修改（{0}）。</value>
+  </data>
+  <data name="Reason_Mod_Steady" xml:space="preserve">
+    <value>最后修改于 {0}。</value>
+  </data>
+  <data name="Reason_ModificationPattern_None" xml:space="preserve">
+    <value>修改历史没有特别之处。</value>
+  </data>
+  <data name="Reason_PathContext_None" xml:space="preserve">
+    <value>所在目录没有特别的语义。</value>
+  </data>
+  <data name="Reason_Path_Personal" xml:space="preserve">
+    <value>位于看起来属于个人或有年代感的目录（{0}）。</value>
+  </data>
+  <data name="Reason_Path_Transient" xml:space="preserve">
+    <value>位于临时、缓存或系统目录中。</value>
+  </data>
+  <data name="Reason_PersonalArtifact_None" xml:space="preserve">
+    <value>不是明显的个人文件类型。</value>
+  </data>
+  <data name="Reason_Personal_Type" xml:space="preserve">
+    <value>{0} 文件通常由人创建，而不是系统生成。</value>
+  </data>
+  <data name="Reason_Rarity_Common" xml:space="preserve">
+    <value>{0} 是非常常见的扩展名（{1} 次出现）。</value>
+  </data>
+  <data name="Reason_Rarity_None" xml:space="preserve">
+    <value>扩展名并不特别稀有。</value>
+  </data>
+  <data name="Reason_Rarity_Rare" xml:space="preserve">
+    <value>在已扫描的 {2} 个文件中，{0} 扩展名仅出现 {1} 次。</value>
+  </data>
+  <data name="Reason_Unusual_Flags" xml:space="preserve">
+    <value>异常特征：{0}。</value>
+  </data>
+  <data name="Reason_Unusual_None" xml:space="preserve">
+    <value>结构上没有异常。</value>
+  </data>
+  <data name="Reason_Unusualness_None" xml:space="preserve">
+    <value>结构上没有异常。</value>
+  </data>
+  <data name="Report_AiNotConfigured" xml:space="preserve">
+    <value>未配置 OpenAI 兼容 API，因此本报告仅基于本地分析。</value>
+  </data>
+  <data name="Report_AiObservations" xml:space="preserve">
+    <value>AI 观察</value>
+  </data>
+  <data name="Report_AiPartial" xml:space="preserve">
+    <value>部分文件的 AI 分析失败，已使用本地评分。</value>
+  </data>
+  <data name="Report_AiSkipped" xml:space="preserve">
+    <value>本次运行跳过了 AI 分析。</value>
+  </data>
+  <data name="Report_AiUnavailable" xml:space="preserve">
+    <value>部分文件没有可用的 AI 分析。</value>
+  </data>
+  <data name="Report_CancelledPartial" xml:space="preserve">
+    <value>本次运行被取消，报告仅覆盖已完成的部分。</value>
+  </data>
+  <data name="Report_Discovery" xml:space="preserve">
+    <value>发现 #{0}</value>
+  </data>
+  <data name="Report_Export" xml:space="preserve">
+    <value>导出为 Markdown</value>
+  </data>
+  <data name="Report_ExportFailed" xml:space="preserve">
+    <value>报告导出失败。</value>
+  </data>
+  <data name="Report_Exported" xml:space="preserve">
+    <value>报告已导出到 {0}</value>
+  </data>
+  <data name="Report_Fact_AiAnalyzed" xml:space="preserve">
+    <value>AI 分析数</value>
+  </data>
+  <data name="Report_Fact_Candidates" xml:space="preserve">
+    <value>候选评分</value>
+  </data>
+  <data name="Report_Fact_Discovered" xml:space="preserve">
+    <value>发现文件数</value>
+  </data>
+  <data name="Report_Fact_Discoveries" xml:space="preserve">
+    <value>发现数</value>
+  </data>
+  <data name="Report_Fact_Duration" xml:space="preserve">
+    <value>耗时</value>
+  </data>
+  <data name="Report_Fact_Narrative" xml:space="preserve">
+    <value>叙述来源</value>
+  </data>
+  <data name="Report_Fact_Scope" xml:space="preserve">
+    <value>范围</value>
+  </data>
+  <data name="Report_Fact_Source" xml:space="preserve">
+    <value>发现引擎</value>
+  </data>
+  <data name="Report_FinalSummary" xml:space="preserve">
+    <value>总结</value>
+  </data>
+  <data name="Report_FinalSummary_Local" xml:space="preserve">
+    <value>本次运行发现 {0} 个条目。程序没有修改、移动或删除任何文件：计算机考古学家只读取。</value>
+  </data>
+  <data name="Report_ForgottenProjects" xml:space="preserve">
+    <value>被遗忘的项目</value>
+  </data>
+  <data name="Report_ForgottenProjects_Intro" xml:space="preserve">
+    <value>看起来是某人开始后又放下的东西。</value>
+  </data>
+  <data name="Report_GeneratedAt" xml:space="preserve">
+    <value>生成于 {0}</value>
+  </data>
+  <data name="Report_HistoricalArtifacts" xml:space="preserve">
+    <value>历史遗迹</value>
+  </data>
+  <data name="Report_HistoricalArtifacts_Intro" xml:space="preserve">
+    <value>本次运行中发现的最古老的痕迹。</value>
+  </data>
+  <data name="Report_ImportantFiles" xml:space="preserve">
+    <value>可能重要的文件</value>
+  </data>
+  <data name="Report_ImportantFiles_Intro" xml:space="preserve">
+    <value>对你个人可能有意义、不应丢失的文件。</value>
+  </data>
+  <data name="Report_MostInteresting" xml:space="preserve">
+    <value>最有趣的发现</value>
+  </data>
+  <data name="Report_MostInteresting_Intro" xml:space="preserve">
+    <value>本次运行中得分最高的文件。</value>
+  </data>
+  <data name="Report_Narrative_Ai" xml:space="preserve">
+    <value>由配置的 AI 模型撰写</value>
+  </data>
+  <data name="Report_Narrative_Local" xml:space="preserve">
+    <value>本地生成</value>
+  </data>
+  <data name="Report_NoReport" xml:space="preserve">
+    <value>还没有报告。</value>
+  </data>
+  <data name="Report_NoReportHint" xml:space="preserve">
+    <value>完成一次考古后即可生成报告。</value>
+  </data>
+  <data name="Report_Observations_Empty" xml:space="preserve">
+    <value>本次运行没有文件超过有趣值阈值。</value>
+  </data>
+  <data name="Report_Observations_Local" xml:space="preserve">
+    <value>最古老的条目是 {0}。主要类别为 {1}。</value>
+  </data>
+  <data name="Report_OldDocuments" xml:space="preserve">
+    <value>老文档</value>
+  </data>
+  <data name="Report_OldDocuments_Intro" xml:space="preserve">
+    <value>在这台电脑上躺了很多年的文档。</value>
+  </data>
+  <data name="Report_OpenDetails" xml:space="preserve">
+    <value>查看详情</value>
+  </data>
+  <data name="Report_Overview" xml:space="preserve">
+    <value>总览</value>
+  </data>
+  <data name="Report_Overview_Body" xml:space="preserve">
+    <value>你的电脑索引中有 {0} 个文件。本次运行检查了 {1} 个候选文件，经过本地分析与 AI 语义分析后，识别出 {2} 个特别有趣的条目。</value>
+  </data>
+  <data name="Report_Overview_BodyNoAi" xml:space="preserve">
+    <value>你的电脑索引中有 {0} 个文件。本次运行仅使用本地分析检查了 {1} 个候选文件，识别出 {2} 个特别有趣的条目。</value>
+  </data>
+  <data name="Report_Overview_Run_Ai" xml:space="preserve">
+    <value>本次运行检查了 {0} 个文件，并为 {1} 个候选评分。结合本地测量与 AI 语义分析，识别出 {2} 个特别有趣的条目。</value>
+  </data>
+  <data name="Report_Overview_Run_Local" xml:space="preserve">
+    <value>本次运行仅使用本地分析检查了 {0} 个文件，并为 {1} 个候选评分，识别出 {2} 个特别有趣的条目。</value>
+  </data>
+  <data name="Report_Scope_Roots" xml:space="preserve">
+    <value>已选 {0} 个位置</value>
+  </data>
+  <data name="Report_Scope_WholeMachine" xml:space="preserve">
+    <value>整台电脑</value>
+  </data>
+  <data name="Report_StrangeFiles" xml:space="preserve">
+    <value>奇怪文件</value>
+  </data>
+  <data name="Report_StrangeFiles_Intro" xml:space="preserve">
+    <value>奇怪的名字、扩展名或结构。</value>
+  </data>
+  <data name="Report_Timeline" xml:space="preserve">
+    <value>时间线</value>
+  </data>
+  <data name="Report_Timeline_Count" xml:space="preserve">
+    <value>{0} 个条目</value>
+  </data>
+  <data name="Report_Timeline_Year" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="Report_Title" xml:space="preserve">
+    <value>计算机考古报告</value>
+  </data>
+  <data name="Report_WhyInteresting" xml:space="preserve">
+    <value>为什么它有趣</value>
+  </data>
+  <data name="Scope_ChooseFolder" xml:space="preserve">
+    <value>选择文件夹…</value>
+  </data>
+  <data name="Scope_Drive" xml:space="preserve">
+    <value>磁盘 {0}</value>
+  </data>
+  <data name="Scope_Entire" xml:space="preserve">
+    <value>整台电脑</value>
+  </data>
+  <data name="Scope_Entire_Desc" xml:space="preserve">
+    <value>所有已索引的本地磁盘。</value>
+  </data>
+  <data name="Scope_Folders" xml:space="preserve">
+    <value>指定文件夹</value>
+  </data>
+  <data name="Scope_SelectedNone" xml:space="preserve">
+    <value>尚未选择文件夹，将搜索整台电脑。</value>
+  </data>
+  <data name="Scope_SettingsHint" xml:space="preserve">
+    <value>已按设置预填。</value>
+  </data>
+  <data name="Scope_Start" xml:space="preserve">
+    <value>开始考古</value>
+  </data>
+  <data name="Scope_Subtitle" xml:space="preserve">
+    <value>使用 Everything 进行检索，选择搜索范围。</value>
+  </data>
+  <data name="Scope_Title" xml:space="preserve">
+    <value>选择考古范围</value>
+  </data>
+  <data name="Settings_AddPlaceholder_Extension" xml:space="preserve">
+    <value>.tmp</value>
+  </data>
+  <data name="Settings_AddPlaceholder_Path" xml:space="preserve">
+    <value>D:\Old Projects</value>
+  </data>
+  <data name="Settings_Advanced" xml:space="preserve">
+    <value>高级</value>
+  </data>
+  <data name="Settings_AnalyzeArchives" xml:space="preserve">
+    <value>分析压缩包列表</value>
+  </data>
+  <data name="Settings_AnalyzeCode" xml:space="preserve">
+    <value>分析代码结构</value>
+  </data>
+  <data name="Settings_AnalyzeImages" xml:space="preserve">
+    <value>分析图片元数据</value>
+  </data>
+  <data name="Settings_AnalyzeImages_Desc" xml:space="preserve">
+    <value>从图片文件头读取尺寸与格式，绝不上传图像像素。</value>
+  </data>
+  <data name="Settings_ApiKey" xml:space="preserve">
+    <value>API Key</value>
+  </data>
+  <data name="Settings_ApiKey_Empty" xml:space="preserve">
+    <value>尚未保存 API Key。</value>
+  </data>
+  <data name="Settings_ApiKey_Placeholder" xml:space="preserve">
+    <value>sk-…</value>
+  </data>
+  <data name="Settings_ApiKey_Stored" xml:space="preserve">
+    <value>已保存密钥。输入新值即可替换。</value>
+  </data>
+  <data name="Settings_Appearance" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="Settings_Archaeology" xml:space="preserve">
+    <value>考古</value>
+  </data>
+  <data name="Settings_BaseUrl" xml:space="preserve">
+    <value>Base URL</value>
+  </data>
+  <data name="Settings_ClearKey" xml:space="preserve">
+    <value>清除 API Key</value>
+  </data>
+  <data name="Settings_Concurrency" xml:space="preserve">
+    <value>AI 并发请求数</value>
+  </data>
+  <data name="Settings_Connected" xml:space="preserve">
+    <value>连接成功</value>
+  </data>
+  <data name="Settings_DataFolder" xml:space="preserve">
+    <value>数据目录</value>
+  </data>
+  <data name="Settings_Discovery" xml:space="preserve">
+    <value>文件发现</value>
+  </data>
+  <data name="Settings_Discovery_Budget" xml:space="preserve">
+    <value>时间预算（分钟，0 表示不限）</value>
+  </data>
+  <data name="Settings_Discovery_Concurrency" xml:space="preserve">
+    <value>并行目录遍历数</value>
+  </data>
+  <data name="Settings_Discovery_Concurrency_Desc" xml:space="preserve">
+    <value>SSD 上数值越高越快；机械硬盘或网络共享建议降低。</value>
+  </data>
+  <data name="Settings_Discovery_Desc" xml:space="preserve">
+    <value>计算机考古学家自行并行遍历文件系统，并带有时间与文件数硬性预算。无需任何外部索引或服务，扫描过程完全不离开本机。</value>
+  </data>
+  <data name="Settings_Discovery_MaxFiles" xml:space="preserve">
+    <value>每次运行最大扫描文件数</value>
+  </data>
+  <data name="Settings_ExcludedExtensions" xml:space="preserve">
+    <value>排除扩展名</value>
+  </data>
+  <data name="Settings_ExcludedExtensions_Desc" xml:space="preserve">
+    <value>额外忽略的扩展名，例如 .iso</value>
+  </data>
+  <data name="Settings_ExcludedPaths" xml:space="preserve">
+    <value>排除路径</value>
+  </data>
+  <data name="Settings_ExcludedPaths_Desc" xml:space="preserve">
+    <value>额外忽略的文件夹。系统目录、缓存与构建产物的内置排除始终生效。</value>
+  </data>
+  <data name="Settings_Fallback" xml:space="preserve">
+    <value>允许内置回退扫描</value>
+  </data>
+  <data name="Settings_Fallback_Desc" xml:space="preserve">
+    <value>仅在 Everything 不可用时使用。它会遍历本地磁盘，并带有时间与文件数硬限制，速度慢得多。</value>
+  </data>
+  <data name="Settings_HashTop" xml:space="preserve">
+    <value>为最终候选计算 SHA-256</value>
+  </data>
+  <data name="Settings_IncludedRoots" xml:space="preserve">
+    <value>限定搜索范围</value>
+  </data>
+  <data name="Settings_IncludedRoots_Desc" xml:space="preserve">
+    <value>留空则搜索整台电脑。</value>
+  </data>
+  <data name="Settings_JsonMode" xml:space="preserve">
+    <value>请求接口使用 JSON 输出模式</value>
+  </data>
+  <data name="Settings_KeyCleared" xml:space="preserve">
+    <value>已清除保存的 API Key。</value>
+  </data>
+  <data name="Settings_KeySaved" xml:space="preserve">
+    <value>API Key 已存入 Windows 凭据管理器。</value>
+  </data>
+  <data name="Settings_KeyStorageFormat" xml:space="preserve">
+    <value>保存位置：{0}</value>
+  </data>
+  <data name="Settings_KeyStorage_CredentialManager" xml:space="preserve">
+    <value>Windows 凭据管理器</value>
+  </data>
+  <data name="Settings_KeyStorage_Memory" xml:space="preserve">
+    <value>仅内存</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Settings_LanguageApplied" xml:space="preserve">
+    <value>语言已应用。</value>
+  </data>
+  <data name="Settings_Language_System" xml:space="preserve">
+    <value>跟随系统</value>
+  </data>
+  <data name="Settings_MaxAi" xml:space="preserve">
+    <value>每次运行最大 AI 分析数</value>
+  </data>
+  <data name="Settings_MaxCandidates" xml:space="preserve">
+    <value>本地评分保留的候选数</value>
+  </data>
+  <data name="Settings_MaxContentBytes" xml:space="preserve">
+    <value>内容摘要最大字节数</value>
+  </data>
+  <data name="Settings_MaxDiscoveries" xml:space="preserve">
+    <value>报告中最大发现数</value>
+  </data>
+  <data name="Settings_MaxScan" xml:space="preserve">
+    <value>最大扫描文件数</value>
+  </data>
+  <data name="Settings_MinScore" xml:space="preserve">
+    <value>最低有趣值</value>
+  </data>
+  <data name="Settings_Model" xml:space="preserve">
+    <value>模型</value>
+  </data>
+  <data name="Settings_OpenAi" xml:space="preserve">
+    <value>OpenAI 兼容 API</value>
+  </data>
+  <data name="Settings_OpenAi_Desc" xml:space="preserve">
+    <value>任何兼容 OpenAI Chat Completions 的接口都可以使用。</value>
+  </data>
+  <data name="Settings_OpenDataFolder" xml:space="preserve">
+    <value>打开数据目录</value>
+  </data>
+  <data name="Settings_Privacy" xml:space="preserve">
+    <value>隐私</value>
+  </data>
+  <data name="Settings_Privacy_Metadata" xml:space="preserve">
+    <value>仅元数据</value>
+  </data>
+  <data name="Settings_Privacy_Metadata_Desc" xml:space="preserve">
+    <value>发送文件名、路径、时间、大小、扩展名与文件夹上下文，不发送文件内容。</value>
+  </data>
+  <data name="Settings_Privacy_Notice" xml:space="preserve">
+    <value>AI 分析可能会将选中文件的部分元数据或内容摘要发送到配置的 OpenAI 兼容 API。文件发现与评分始终在本地完成。</value>
+  </data>
+  <data name="Settings_Privacy_Off" xml:space="preserve">
+    <value>禁止 AI 内容分析</value>
+  </data>
+  <data name="Settings_Privacy_Off_Desc" xml:space="preserve">
+    <value>完全不发送任何请求，全部本地运行并生成报告。</value>
+  </data>
+  <data name="Settings_Privacy_Smart" xml:space="preserve">
+    <value>智能内容</value>
+  </data>
+  <data name="Settings_Privacy_Smart_Desc" xml:space="preserve">
+    <value>在有助于判断时，额外读取文本类文件的少量内容。</value>
+  </data>
+  <data name="Settings_ResetConfirm_Message" xml:space="preserve">
+    <value>主题、语言、API 地址、考古限制与权重都会恢复默认值。已保存的 API Key 不受影响。</value>
+  </data>
+  <data name="Settings_ResetConfirm_Title" xml:space="preserve">
+    <value>恢复全部默认设置？</value>
+  </data>
+  <data name="Settings_ResetDefaults" xml:space="preserve">
+    <value>恢复默认设置</value>
+  </data>
+  <data name="Settings_Retries" xml:space="preserve">
+    <value>429 / 5xx / 超时重试次数</value>
+  </data>
+  <data name="Settings_Subtitle" xml:space="preserve">
+    <value>所有设置都保存在本地，API Key 不会以明文写入任何文件。</value>
+  </data>
+  <data name="Settings_TestConnection" xml:space="preserve">
+    <value>测试连接</value>
+  </data>
+  <data name="Settings_Testing" xml:space="preserve">
+    <value>正在测试…</value>
+  </data>
+  <data name="Settings_Theme" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="Settings_ThemeApplied" xml:space="preserve">
+    <value>主题已应用。</value>
+  </data>
+  <data name="Settings_Theme_Dark" xml:space="preserve">
+    <value>深色</value>
+  </data>
+  <data name="Settings_Theme_Light" xml:space="preserve">
+    <value>浅色</value>
+  </data>
+  <data name="Settings_Theme_System" xml:space="preserve">
+    <value>跟随系统</value>
+  </data>
+  <data name="Settings_Timeout" xml:space="preserve">
+    <value>请求超时（秒）</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Settings_Weight_Ai" xml:space="preserve">
+    <value>AI 权重（按置信度缩放）</value>
+  </data>
+  <data name="Settings_Weight_MinConfidence" xml:space="preserve">
+    <value>最低置信度系数</value>
+  </data>
+  <data name="Settings_Weights" xml:space="preserve">
+    <value>有趣值权重</value>
+  </data>
+  <data name="Settings_Weights_Desc" xml:space="preserve">
+    <value>权重会自动归一化，无需合计为 1。</value>
+  </data>
+  <data name="TitleBar_Maximize" xml:space="preserve">
+    <value>最大化</value>
+  </data>
+  <data name="TitleBar_Minimize" xml:space="preserve">
+    <value>最小化</value>
+  </data>
+  <data name="TitleBar_Restore" xml:space="preserve">
+    <value>还原</value>
+  </data>
+  <data name="Warning_Cancelled" xml:space="preserve">
+    <value>运行已取消，部分结果已保留。</value>
+  </data>
+  <data name="Warning_CancelledDuringAi" xml:space="preserve">
+    <value>在 AI 分析阶段取消，部分候选未被分析。</value>
+  </data>
+  <data name="Warning_ScanBudgetReached" xml:space="preserve">
+    <value>已达到时间预算，扫描提前结束。</value>
+  </data>
+  <data name="Warning_ScanLimitReached" xml:space="preserve">
+    <value>已达到配置的最大文件数，扫描提前结束。</value>
+  </data>
+  <data name="Warning_SettingsLoadFailed" xml:space="preserve">
+    <value>设置文件读取失败，已使用默认值。</value>
+  </data>
+</root>

@@ -1,0 +1,21 @@
+# Normalise every text file to LF in the repository, and check it out as LF everywhere. This project
+# is developed through both Windows tooling and WSL against the same working tree, so a single
+# canonical line ending avoids spurious "modified" churn.
+* text=auto eol=lf
+
+*.cs        text diff=csharp
+*.xaml      text
+*.csproj    text
+*.slnx      text
+*.resw      text
+*.md        text
+*.ps1       text
+*.py        text
+*.json      text
+*.manifest  text
+
+# Binary assets
+*.png       binary
+*.ico       binary
+*.jpg       binary
+*.gif       binary

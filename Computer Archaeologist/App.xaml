@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="ComputerArchaeologist.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:loc="using:ComputerArchaeologist.Core.Localization"
+    xmlns:conv="using:ComputerArchaeologist.Converters">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <ResourceDictionary Source="ms-appx:///Resources/Styles/Cards.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- The single binding source for every localized string. -->
+            <loc:Loc x:Key="Loc" />
+
+            <conv:BoolToVisibilityConverter x:Key="BoolToVisibility" />
+            <conv:BoolToVisibilityConverter x:Key="InverseBoolToVisibility" Invert="True" />
+            <conv:NullToVisibilityConverter x:Key="NullToVisibility" />
+            <conv:ScoreToBrushConverter x:Key="ScoreToBrush" />
+            <conv:ScoreToPercentConverter x:Key="ScoreToPercent" />
+            <conv:FileSizeConverter x:Key="FileSize" />
+            <conv:DateTimeConverter x:Key="DateTime" />
+            <conv:CategoryLabelConverter x:Key="CategoryLabel" />
+            <conv:FileGlyphConverter x:Key="FileGlyph" />
+            <conv:StringToVisibilityConverter x:Key="StringToVisibility" />
+            <conv:PercentToLabelConverter x:Key="PercentToLabel" />
+            <conv:PathToThumbnailConverter x:Key="Thumbnail" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

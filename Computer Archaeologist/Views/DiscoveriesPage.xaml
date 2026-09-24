@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:AppPage
+    x:Class="ComputerArchaeologist.Views.DiscoveriesPage"
+    x:Name="PageRoot"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:ComputerArchaeologist.Views"
+    mc:Ignorable="d">
+
+    <Grid Padding="32,24,32,0" RowSpacing="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- ============ header ============ -->
+        <StackPanel Grid.Row="0" Spacing="4">
+            <TextBlock Text="{Binding [Disc_Title], Source={StaticResource Loc}}" Style="{StaticResource TitleTextBlockStyle}" />
+            <TextBlock Text="{Binding Subtitle}"
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                       TextWrapping="Wrap" />
+        </StackPanel>
+
+        <!-- ============ toolbar (reflows, so it never squeezes the title) ============ -->
+        <ScrollViewer
+            Grid.Row="1"
+            Margin="0,4,0,0"
+            HorizontalScrollBarVisibility="Auto"
+            HorizontalScrollMode="Auto"
+            VerticalScrollBarVisibility="Disabled">
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <ComboBox MinWidth="196" SelectedIndex="{Binding SortIndex, Mode=TwoWay}"
+                          Header="{Binding [Disc_Sort], Source={StaticResource Loc}}"
+                          AutomationProperties.Name="{Binding [Disc_Sort], Source={StaticResource Loc}}">
+                    <ComboBoxItem Content="{Binding [Disc_Sort_MostInteresting], Source={StaticResource Loc}}" />
+                    <ComboBoxItem Content="{Binding [Disc_Sort_Oldest], Source={StaticResource Loc}}" />
+                    <ComboBoxItem Content="{Binding [Disc_Sort_Strangest], Source={StaticResource Loc}}" />
+                    <ComboBoxItem Content="{Binding [Disc_Sort_MostPersonal], Source={StaticResource Loc}}" />
+                    <ComboBoxItem Content="{Binding [Disc_Sort_MostTechnical], Source={StaticResource Loc}}" />
+                    <ComboBoxItem Content="{Binding [Disc_Sort_Largest], Source={StaticResource Loc}}" />
+                </ComboBox>
+
+                <ComboBox MinWidth="196"
+                          Header="{Binding [Disc_Filter], Source={StaticResource Loc}}"
+                          ItemsSource="{Binding Categories}"
+                          SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                          AutomationProperties.Name="{Binding [Disc_Filter], Source={StaticResource Loc}}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Converter={StaticResource CategoryLabel}}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <Button VerticalAlignment="Bottom" MinHeight="32" Margin="0,24,0,0" Command="{Binding GoToReportsCommand}">
+                    <TextBlock Text="{Binding [Nav_Reports], Source={StaticResource Loc}}" />
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- ============ empty state ============ -->
+        <Border Grid.Row="2" Style="{StaticResource CardBorder}"
+                Visibility="{Binding IsEmpty, Converter={StaticResource BoolToVisibility}}">
+            <StackPanel Spacing="12" HorizontalAlignment="Center" Padding="0,24">
+                <FontIcon Glyph="&#xE721;" FontSize="28" Foreground="{ThemeResource TextFillColorTertiaryBrush}" HorizontalAlignment="Center" />
+                <TextBlock Text="{Binding [Disc_Empty], Source={StaticResource Loc}}"
+                           Style="{StaticResource SubtitleTextBlockStyle}"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="{Binding [Disc_EmptyHint], Source={StaticResource Loc}}"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           TextWrapping="Wrap" MaxWidth="520" TextAlignment="Center" />
+                <Button Style="{StaticResource AccentButtonStyle}" HorizontalAlignment="Center"
+                        Command="{Binding GoToArchaeologyCommand}">
+                    <TextBlock Text="{Binding [Home_Start], Source={StaticResource Loc}}" />
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <!-- ============ list ============ -->
+        <ListView Grid.Row="3"
+                  ItemsSource="{Binding Artifacts}"
+                  SelectionMode="None"
+                  IsItemClickEnabled="True"
+                  ItemClick="OnArtifactClick"
+                  Padding="0,0,0,32"
+                  Visibility="{Binding HasArtifacts, Converter={StaticResource BoolToVisibility}}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <Setter Property="Padding" Value="0,6" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Style="{StaticResource CardBorder}" Padding="18">
+                        <Grid ColumnSpacing="16">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <FontIcon Grid.Column="0"
+                                      Glyph="{Binding Artifact.File.Extension, Converter={StaticResource FileGlyph}}"
+                                      FontSize="26"
+                                      VerticalAlignment="Top"
+                                      Margin="0,4,0,0"
+                                      Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+
+                            <StackPanel Grid.Column="1" Spacing="6">
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <TextBlock Text="{Binding Artifact.FileName}" Style="{StaticResource BodyStrongTextBlockStyle}" TextTrimming="CharacterEllipsis" />
+                                    <Border Style="{StaticResource ScorePillBorder}" Padding="8,2">
+                                        <TextBlock Text="{Binding Artifact.Category, Converter={StaticResource CategoryLabel}}"
+                                                   Style="{StaticResource CaptionTextBlockStyle}"
+                                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                    </Border>
+                                </StackPanel>
+
+                                <TextBlock Text="{Binding Artifact.FullPath}" Style="{StaticResource MonoTextBlock}" TextTrimming="CharacterEllipsis" MaxLines="2" />
+
+                                <TextBlock Text="{Binding Artifact.Summary}" TextWrapping="Wrap" MaxLines="3" TextTrimming="CharacterEllipsis" />
+
+                                <StackPanel Orientation="Horizontal" Spacing="16">
+                                    <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorTertiaryBrush}">
+                                        <Run Text="{Binding [Disc_Created], Source={StaticResource Loc}}" />
+                                        <Run Text="{Binding Artifact.File.CreatedUtc, Converter={StaticResource DateTime}}" />
+                                    </TextBlock>
+                                    <TextBlock Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorTertiaryBrush}">
+                                        <Run Text="{Binding [Disc_Modified], Source={StaticResource Loc}}" />
+                                        <Run Text="{Binding Artifact.File.ModifiedUtc, Converter={StaticResource DateTime}}" />
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding Artifact.File.SizeBytes, Converter={StaticResource FileSize}}"
+                                               Style="{StaticResource CaptionTextBlockStyle}"
+                                               Foreground="{ThemeResource TextFillColorTertiaryBrush}" />
+                                </StackPanel>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" Spacing="6" MinWidth="150" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding [Disc_ScoreLabel], Source={StaticResource Loc}}"
+                                           Style="{StaticResource CaptionTextBlockStyle}"
+                                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                           HorizontalAlignment="Right" />
+                                <TextBlock Text="{Binding Artifact.FinalScore}"
+                                           Style="{StaticResource TitleTextBlockStyle}"
+                                           HorizontalAlignment="Right"
+                                           Foreground="{Binding Artifact.FinalScore, Converter={StaticResource ScoreToBrush}}" />
+                                <ProgressBar Value="{Binding Artifact.FinalScore}" Maximum="100" Width="140" />
+                                <Button HorizontalAlignment="Right" Padding="10,4" Command="{Binding OpenDetailsCommand}">
+                                    <TextBlock Text="{Binding [Disc_Details], Source={StaticResource Loc}}" FontSize="12" />
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</local:AppPage>

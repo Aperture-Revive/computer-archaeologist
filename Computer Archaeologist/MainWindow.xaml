@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="ComputerArchaeologist.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="BaseAlt" />
+    </Window.SystemBackdrop>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--
+            Custom title bar, in the spirit of the Windows 11 Task Manager: a full width strip that
+            blends into the Mica backdrop, with the app mark on the left and the system caption
+            buttons on the right. The strip is registered with SetTitleBar so dragging, double-click to
+            maximize and the Snap Layouts flyout all keep working.
+        -->
+        <Grid x:Name="AppTitleBar" Grid.Row="0" Height="48" Padding="14,0,0,0">
+            <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
+                <Image
+                    Source="ms-appx:///Assets/Square44x44Logo.scale-200.png"
+                    Width="20"
+                    Height="20"
+                    AutomationProperties.AccessibilityView="Raw" />
+                <TextBlock
+                    x:Name="AppTitleText"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    FontSize="12"
+                    VerticalAlignment="Center"
+                    TextTrimming="CharacterEllipsis" />
+            </StackPanel>
+        </Grid>
+
+        <NavigationView
+            x:Name="ShellNavigation"
+            Grid.Row="1"
+            IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="False"
+            IsTitleBarAutoPaddingEnabled="False"
+            PaneDisplayMode="Auto"
+            OpenPaneLength="252"
+            CompactPaneLength="48"
+            CompactModeThresholdWidth="720"
+            ExpandedModeThresholdWidth="1040"
+            SelectionChanged="OnNavigationSelectionChanged">
+
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Name="HomeItem" Tag="home" Content="{Binding [Nav_Home], Source={StaticResource Loc}}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE80F;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Name="ArchaeologyItem" Tag="archaeology" Content="{Binding [Nav_Archaeology], Source={StaticResource Loc}}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE81C;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Name="DiscoveriesItem" Tag="discoveries" Content="{Binding [Nav_Discoveries], Source={StaticResource Loc}}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE721;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Name="ReportsItem" Tag="reports" Content="{Binding [Nav_Reports], Source={StaticResource Loc}}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8A5;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Name="SettingsItem" Tag="settings" Content="{Binding [Nav_Settings], Source={StaticResource Loc}}">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE713;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="ContentFrame" />
+        </NavigationView>
+    </Grid>
+</Window>

@@ -1,0 +1,63 @@
+# ---------------------------------------------------------------- build output
+[Bb]in/
+[Oo]bj/
+[Aa]pp[Xx]/
+[Dd]ebug/
+[Rr]elease/
+*.build.appxrecipe
+*.appx
+*.appxbundle
+*.msix
+*.msixbundle
+*.msixupload
+*.appxupload
+
+# ---------------------------------------------------------------- Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.userprefs
+*.DotSettings.user
+launchSettings.json.bak
+
+# ---------------------------------------------------------------- test output
+[Tt]est[Rr]esult*/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.VisualState.xml
+
+# ---------------------------------------------------------------- NuGet / packaging
+*.nupkg
+*.snupkg
+packages/
+*.binlog
+
+# ---------------------------------------------------------------- application state (must never be committed)
+# The running app writes these under %LOCALAPPDATA%, never here; listed as a safety net.
+settings.json
+credentials.bin
+sessions/
+exports/
+computer-archaeologist-*.log
+
+# ---------------------------------------------------------------- secrets
+*.pfx
+*.snk
+.env
+.env.*
+appsettings.local.json
+appsettings.*.local.json
+
+# ---------------------------------------------------------------- OS noise
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.log

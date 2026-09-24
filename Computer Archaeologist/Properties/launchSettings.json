@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Computer Archaeologist (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Computer Archaeologist (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

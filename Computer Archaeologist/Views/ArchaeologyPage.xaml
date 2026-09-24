@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<local:AppPage
+    x:Class="ComputerArchaeologist.Views.ArchaeologyPage"
+    x:Name="PageRoot"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:ComputerArchaeologist.Views"
+    xmlns:vm="using:ComputerArchaeologist.ViewModels"
+    mc:Ignorable="d">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid Padding="32,24,32,40">
+            <StackPanel Spacing="20" MaxWidth="1440" HorizontalAlignment="Stretch">
+
+            <StackPanel Spacing="4">
+                <TextBlock Text="{Binding [Arch_Title], Source={StaticResource Loc}}" Style="{StaticResource TitleTextBlockStyle}" />
+                <TextBlock Text="{Binding [Arch_Subtitle], Source={StaticResource Loc}}"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           TextWrapping="Wrap" />
+            </StackPanel>
+
+            <!-- ============ actions ============ -->
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <Button Style="{StaticResource AccentButtonStyle}"
+                        MinWidth="190"
+                        Command="{Binding RequestStartCommand}"
+                        IsEnabled="{Binding CanStart}">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon Glyph="&#xE81C;" FontSize="15" />
+                        <TextBlock Text="{Binding [Arch_Start], Source={StaticResource Loc}}" />
+                    </StackPanel>
+                </Button>
+                <Button Command="{Binding CancelCommand}" IsEnabled="{Binding IsRunning}">
+                    <TextBlock Text="{Binding [Arch_Cancel], Source={StaticResource Loc}}" />
+                </Button>
+                <TextBlock Text="{Binding StatusText}"
+                           VerticalAlignment="Center"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            </StackPanel>
+
+            <!-- ============ progress ============ -->
+            <Border Style="{StaticResource CardBorder}">
+                <StackPanel Spacing="14">
+
+                    <Grid ColumnSpacing="16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding StageHeading}" Style="{StaticResource SubtitleTextBlockStyle}" TextWrapping="Wrap" />
+                        <TextBlock Grid.Column="1" Text="{Binding OverallProgress, Converter={StaticResource PercentToLabel}}"
+                                   Style="{StaticResource SubtitleTextBlockStyle}"
+                                   Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                    </Grid>
+
+                    <StackPanel Spacing="6">
+                        <TextBlock Text="{Binding [Arch_Overall], Source={StaticResource Loc}}" Style="{StaticResource CaptionTextBlockStyle}"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        <ProgressBar Value="{Binding OverallProgress, Mode=OneWay}" Maximum="100" Height="6" />
+                    </StackPanel>
+
+                    <StackPanel Spacing="6">
+                        <TextBlock Text="{Binding [Arch_Current], Source={StaticResource Loc}}" Style="{StaticResource CaptionTextBlockStyle}"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        <ProgressBar Value="{Binding StageProgress, Mode=OneWay}" Maximum="100"
+                                     IsIndeterminate="{Binding IsStageIndeterminate, Mode=OneWay}" Height="4" />
+                        <TextBlock Text="{Binding CurrentItem}" Style="{StaticResource MonoTextBlock}" TextTrimming="CharacterEllipsis" />
+                    </StackPanel>
+
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Style="{StaticResource SubtleCardBorder}">
+                            <StackPanel Spacing="2">
+                                <TextBlock Text="{Binding [Arch_Scanned], Source={StaticResource Loc}}" Style="{StaticResource CaptionTextBlockStyle}"
+                                           Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                                <TextBlock Text="{Binding FilesScannedText}" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Column="1" Style="{StaticResource SubtleCardBorder}">
+                            <StackPanel Spacing="2">
+                                <TextBlock Text="{Binding [Arch_Candidates], Source={StaticResource Loc}}" Style="{StaticResource CaptionTextBlockStyle}"
+                                           Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                                <TextBlock Text="{Binding CandidatesText}" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Column="2" Style="{StaticResource SubtleCardBorder}">
+                            <StackPanel Spacing="2">
+                                <TextBlock Text="{Binding [Arch_AiAnalyzed], Source={StaticResource Loc}}" Style="{StaticResource CaptionTextBlockStyle}"
+                                           Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                                <TextBlock Text="{Binding AiText}" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- ============ stages + log ============ -->
+            <Grid ColumnSpacing="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" MinWidth="240" MaxWidth="340" />
+                    <ColumnDefinition Width="*" MinWidth="240" />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="10">
+                        <TextBlock Text="{Binding [Arch_StageList], Source={StaticResource Loc}}" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                        <ItemsControl ItemsSource="{Binding Stages}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="vm:StageItemViewModel">
+                                    <Grid ColumnSpacing="10" Padding="0,5">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <FontIcon Grid.Column="0" Glyph="&#xE73E;" FontSize="14"
+                                                  Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"
+                                                  Visibility="{x:Bind IsComplete, Mode=OneWay, Converter={StaticResource BoolToVisibility}}" />
+                                        <ProgressRing Grid.Column="0" Width="14" Height="14" IsActive="True"
+                                                      Visibility="{x:Bind IsActive, Mode=OneWay, Converter={StaticResource BoolToVisibility}}" />
+                                        <Ellipse Grid.Column="0" Width="9" Height="9" Stroke="{ThemeResource TextFillColorTertiaryBrush}"
+                                                 StrokeThickness="1.4"
+                                                 Visibility="{x:Bind IsPending, Mode=OneWay, Converter={StaticResource BoolToVisibility}}" />
+
+                                        <TextBlock Grid.Column="1" Text="{x:Bind Label, Mode=OneWay}" TextWrapping="Wrap"
+                                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="1" Style="{StaticResource CardBorder}">
+                    <StackPanel Spacing="10">
+                        <TextBlock Text="{Binding [Arch_LogSummary], Source={StaticResource Loc}}" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                        <ListView ItemsSource="{Binding LogLines}" MaxHeight="260" SelectionMode="None" IsItemClickEnabled="False">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="x:String">
+                                    <TextBlock Text="{x:Bind}" Style="{StaticResource MonoTextBlock}" TextTrimming="CharacterEllipsis" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <TextBlock Text="{Binding LastOutcome}"
+                                   TextWrapping="Wrap"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   Visibility="{Binding LastOutcomeVisible, Converter={StaticResource BoolToVisibility}}" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- ============ privacy ============ -->
+            <Border Style="{StaticResource SubtleCardBorder}">
+                <StackPanel Spacing="6">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <FontIcon Glyph="&#xE72E;" FontSize="14" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        <TextBlock Text="{Binding [Arch_Discovery_Notice], Source={StaticResource Loc}}"
+                                   TextWrapping="Wrap" Style="{StaticResource CaptionTextBlockStyle}"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <FontIcon Glyph="&#xE8D7;" FontSize="14" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        <TextBlock Text="{Binding [Arch_PrivacyNotice], Source={StaticResource Loc}}"
+                                   TextWrapping="Wrap" Style="{StaticResource CaptionTextBlockStyle}"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</local:AppPage>
