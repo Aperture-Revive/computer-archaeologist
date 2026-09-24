@@ -72,13 +72,20 @@
 
 ## 下载
 
-不想自己编译的话，直接下载已经构建好的发布包：
+不想自己编译的话，直接从 **Releases** 页面获取：
 
-**[Computer-Archaeologist-1.0.0-win-x64.zip](dist/Computer-Archaeologist-1.0.0-win-x64.zip)**（约 42 MB）
+### [⬇ 下载 Computer-Archaeologist-1.0.0-win-x64.zip](https://github.com/Aperture-Revive/computer-archaeologist/releases/download/v1.0.0/Computer-Archaeologist-1.0.0-win-x64.zip)
+
+| | |
+|---|---|
+| 平台 | Windows 10 1809+ / Windows 11，x64 |
+| 大小 | 42.0 MB（解压后 127 MB） |
+| SHA-256 | `ae5a2cf477ca679b9e234d61717b9c400a0cade523b6dd64ce092b22ad54c743` |
+| 发布说明 | [v1.0.0](https://github.com/Aperture-Revive/computer-archaeologist/releases/tag/v1.0.0) · [全部版本](https://github.com/Aperture-Revive/computer-archaeologist/releases) |
 
 解压到任意目录，双击 `Computer Archaeologist.exe` 即可。**无需安装程序**，Windows App SDK 运行时已随包提供，唯一的前置条件是 [.NET 8 桌面运行时](https://dotnet.microsoft.com/download/dotnet/8.0)。
 
-压缩包内的 `READ-ME-FIRST.txt` 包含快速上手、隐私说明与许可信息。
+压缩包内的 `READ-ME-FIRST.txt` 包含快速上手、隐私说明与许可信息。仓库内的 [`dist/`](dist/) 目录也保留了一份相同的副本。
 
 ---
 

@@ -76,15 +76,23 @@ and it runs on a machine that only has the .NET 8 runtime installed.
 
 ## Download
 
-If you do not want to build it yourself, take the prebuilt package:
+If you do not want to build it yourself, take the prebuilt package from the **Releases** page:
 
-**[Computer-Archaeologist-1.0.0-win-x64.zip](dist/Computer-Archaeologist-1.0.0-win-x64.zip)** (~42 MB)
+### [⬇ Download Computer-Archaeologist-1.0.0-win-x64.zip](https://github.com/Aperture-Revive/computer-archaeologist/releases/download/v1.0.0/Computer-Archaeologist-1.0.0-win-x64.zip)
+
+| | |
+|---|---|
+| Platform | Windows 10 1809+ / Windows 11, x64 |
+| Size | 42.0 MB (127 MB extracted) |
+| SHA-256 | `ae5a2cf477ca679b9e234d61717b9c400a0cade523b6dd64ce092b22ad54c743` |
+| Notes | [v1.0.0](https://github.com/Aperture-Revive/computer-archaeologist/releases/tag/v1.0.0) · [all releases](https://github.com/Aperture-Revive/computer-archaeologist/releases) |
 
 Extract it anywhere and run `Computer Archaeologist.exe`. **No installer is required** — the Windows
 App SDK runtime is bundled — and the only prerequisite is the
 [.NET 8 desktop runtime](https://dotnet.microsoft.com/download/dotnet/8.0).
 
-The archive includes `READ-ME-FIRST.txt` with the quick start, privacy notes and licence.
+The archive includes `READ-ME-FIRST.txt` with the quick start, privacy notes and licence. An identical
+copy is kept in [`dist/`](dist/) inside the repository.
 
 ---
 
