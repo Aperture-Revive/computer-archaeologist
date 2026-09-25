@@ -61,7 +61,7 @@ The result is a list of artifacts you can browse, sort, filter, inspect, preview
 | Component | Requirement |
 |-----------|-------------|
 | Operating system | Windows 10 version 1809 (build 17763) or later, including Windows 11 |
-| Architecture | x64 (x86 and ARM64 are also configured) |
+| Architecture | x64 |
 | .NET | **.NET 8** desktop runtime. The app is framework-dependent, so a .NET 8 runtime must be present. |
 | Windows App SDK | **Windows App SDK 2.5.1** — bundled *inside* the build output (`WindowsAppSDKSelfContained`), so no separate Windows App Runtime installation or MSIX deployment is needed. |
 | AI endpoint | Optional. Any OpenAI-compatible chat-completions endpoint. |
