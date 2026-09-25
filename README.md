@@ -59,7 +59,7 @@
 | 组件 | 要求 |
 |------|------|
 | 操作系统 | Windows 10 1809（内部版本 17763）及以上，含 Windows 11 |
-| 架构 | x64（同时配置了 x86 与 ARM64） |
+| 架构 | x64 |
 | .NET | **.NET 8** 桌面运行时。程序是框架依赖部署，因此需要安装 .NET 8 运行时。 |
 | Windows App SDK | **Windows App SDK 2.5.1**——运行时**已打包在发布目录内**（`WindowsAppSDKSelfContained`），因此无需单独安装 Windows App Runtime，也不需要 MSIX 部署。 |
 | AI 接口 | 可选。任何 OpenAI 兼容的 chat completions 接口都可以。 |
